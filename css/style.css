@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  background: green;
+}
+#main button{
+  padding: .5em;
+  margin:.5em;
+  font-size:4em;
+}
+#main input {
+  padding: .5em;
+  margin:.5em;
+  font-size: 4em;
+}
+
+#settings {
+  position:absolute;
+  background:white;
+  padding:1em;
+  margin:1em;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+  border:solid 2px black;
+}
