@@ -35,14 +35,24 @@ const lettersDiv = document.getElementById("letters");
 const speakButton = document.getElementById("speakButton");
 const inputDiv = document.getElementById("input");
 const form = document.getElementById("form");
+let pauseForm = false;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (pauseForm) return;
+
   if (inputDiv.value.toLowerCase().trim() === word) {
+    pauseForm = true;
     const utterance = new SpeechSynthesisUtterance("Correct!");
     speechSynthesis.speak(utterance);
-    setTimeout(() => {
-      start();
-    }, 1000);
+    setTimeout(()=> {
+      document.getElementById("sprite").style.left = (100 * (lastWord/words.length)) + "%";
+      document.getElementById("sprite").src = "./img/princess.gif";
+      setTimeout(() => {
+        document.getElementById("sprite").src = "./img/princess-paused.png";
+        pauseForm = false;
+        start();
+      }, 1000);
+    });
   } else {
     const utterance = new SpeechSynthesisUtterance("Incorrect");
     speechSynthesis.speak(utterance);
@@ -59,6 +69,7 @@ speakButton.addEventListener("click", () => {
 const nextWord = document.getElementById("nextWord");
 nextWord.addEventListener("click", (e) => {
   e.preventDefault();
+  document.getElementById("sprite").src = "./img/princess.gif";
   start();
 })
 
@@ -82,15 +93,24 @@ lettersDiv.addEventListener("click", (e) => {
 });
 document.getElementById("difficultyLevelInput").addEventListener("change", () => {
   difficultyLevel = parseInt(document.getElementById("difficultyLevelInput").value) || difficultyLevel;
+  difficultyLevel = Math.min(difficultyLevel, 9);
+  difficultyLevel = Math.max(difficultyLevel, 0);
   document.getElementById("difficultyLevelInput").value = difficultyLevel;
 })
+let lastWord = 0;
+words.sort(() => {
+  return Math.random() < .5 ? -1 : 1;
+});
 
 function start(){
-  const lastWord = word;
-  do {
-    const index = Math.floor(Math.random() * (length));
-    word = words[index];
-  } while(lastWord === word)
+  word = words[lastWord];
+
+  if (lastWord == words.length){
+    document.body.innerHTML = "<div id='won'><h1 style='font-size:7em;color:white;'>YOU WON!</h1><img src='./img/toad.gif' style='max-height:90%;max-width:50%' /></div>";
+    return;
+  }
+
+  lastWord++;
 
   let letters = [];
   const extras = [];
@@ -98,7 +118,7 @@ function start(){
   while(extras.length < difficultyLevel) {
     const index = Math.floor(Math.random() * (alphabet.length));
     const letter = alphabet[index]
-    if (!word.includes(letter)){
+    if (!word.toLowerCase().includes(letter.toLowerCase())){
       extras.push(letter);
     }
   }
@@ -124,4 +144,7 @@ function start(){
   speechSynthesis.speak(utterance);
   inputDiv.focus();
 }
-start();
+document.getElementById("start").addEventListener("click", ()=>{
+  document.getElementById("start").style.display = "none"
+  start();
+});

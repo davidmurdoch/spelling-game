@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background: green;
+  font-family: 'Merienda', cursive;
 }
 #main button{
   padding: .5em;
@@ -12,6 +13,10 @@ body {
   margin:.5em;
   font-size: 4em;
 }
+input, button, select {
+  font-family: 'Merienda', cursive;
+  box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
 
 #settings {
   position:absolute;
@@ -20,4 +25,50 @@ body {
   margin:1em;
   box-shadow: 2px 2px 5px rgba(0,0,0,.5);
   border:solid 2px black;
+}
+
+#progress {
+  position: fixed;
+  bottom:0;
+  font-size:2em;
+  color:#fff;
+  font-weight: bold;
+  height:4em;
+  width:100%;
+  background-color: white;
+}
+
+#toad, #sprite {
+  margin-top:6px;
+  position:absolute;
+  left:0;
+  top:0;
+  transition: 1s ease-in-out all;
+  height:3em;
+  transform:scaleX(-1);
+}
+
+#toad {
+  right:0;
+  left:auto;
+  margin-top:25px;
+}
+
+#won {
+  background-image: url(../img/tower.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#start{
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:green;
+  color:white;
+  font-size: 5em;
+  text-align: center;
 }
