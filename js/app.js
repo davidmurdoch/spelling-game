@@ -1,3 +1,11 @@
+const quips = [
+  `By the way, you look amazing today!`,
+  `You're doing great! Keep going!`,
+  `Nicely done! You're half way there!`,
+  `I have a joke for you: What do you call a cute donut? Uh dough able!`,
+  "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was piece of cake!",
+  "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
+];
 const words = [
   "kept",
   "speech",
@@ -18,7 +26,7 @@ const words = [
   "waste",
   "master",
   "a lot",
-  "all right"
+  "all right",
 ];
 // const words = [
 //   "it",
@@ -44,8 +52,9 @@ form.addEventListener("submit", (e) => {
     pauseForm = true;
     const utterance = new SpeechSynthesisUtterance("Correct!");
     speechSynthesis.speak(utterance);
-    setTimeout(()=> {
-      document.getElementById("sprite").style.left = (100 * (lastWord/words.length)) + "%";
+    setTimeout(() => {
+      document.getElementById("sprite").style.left =
+        100 * (lastWord / words.length) + "%";
       document.getElementById("sprite").src = "./img/princess.gif";
       setTimeout(() => {
         document.getElementById("sprite").src = "./img/princess-paused.png";
@@ -61,7 +70,7 @@ form.addEventListener("submit", (e) => {
 
 speakButton.addEventListener("click", () => {
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.rate = .6;
+  utterance.rate = 0.6;
 
   speechSynthesis.speak(utterance);
   inputDiv.focus();
@@ -71,13 +80,13 @@ nextWord.addEventListener("click", (e) => {
   e.preventDefault();
   document.getElementById("sprite").src = "./img/princess.gif";
   start();
-})
+});
 
 lettersDiv.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.className === "letter") {
     let letter = e.target.innerHTML;
-    if (letter === "&nbsp;"){
+    if (letter === "&nbsp;") {
       letter = " ";
     }
     inputDiv.value += letter;
@@ -87,26 +96,31 @@ lettersDiv.addEventListener("click", (e) => {
     }
     const utterance = new SpeechSynthesisUtterance(letter);
     speechSynthesis.speak(utterance);
-    
+
     inputDiv.focus();
   }
 });
-document.getElementById("difficultyLevelInput").addEventListener("change", () => {
-  difficultyLevel = parseInt(document.getElementById("difficultyLevelInput").value) || difficultyLevel;
-  difficultyLevel = Math.min(difficultyLevel, 9);
-  difficultyLevel = Math.max(difficultyLevel, 0);
-  document.getElementById("difficultyLevelInput").value = difficultyLevel;
-})
+document
+  .getElementById("difficultyLevelInput")
+  .addEventListener("change", () => {
+    difficultyLevel =
+      parseInt(document.getElementById("difficultyLevelInput").value) ||
+      difficultyLevel;
+    difficultyLevel = Math.min(difficultyLevel, 9);
+    difficultyLevel = Math.max(difficultyLevel, 0);
+    document.getElementById("difficultyLevelInput").value = difficultyLevel;
+  });
 let lastWord = 0;
 words.sort(() => {
-  return Math.random() < .5 ? -1 : 1;
+  return Math.random() < 0.5 ? -1 : 1;
 });
 
-function start(){
+function start() {
   word = words[lastWord];
 
-  if (lastWord == words.length){
-    document.body.innerHTML = "<div id='won'><h1 style='font-size:7em;color:white;'>YOU WON!</h1><img src='./img/toad.gif' style='max-height:90%;max-width:50%' /></div>";
+  if (lastWord == words.length) {
+    document.body.innerHTML =
+      "<div id='won'><h1 style='font-size:7em;color:white;'>YOU WON!</h1><img src='./img/toad.gif' style='max-height:90%;max-width:50%' /></div>";
     return;
   }
 
@@ -114,11 +128,11 @@ function start(){
 
   let letters = [];
   const extras = [];
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
-  while(extras.length < difficultyLevel) {
-    const index = Math.floor(Math.random() * (alphabet.length));
-    const letter = alphabet[index]
-    if (!word.toLowerCase().includes(letter.toLowerCase())){
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  while (extras.length < difficultyLevel) {
+    const index = Math.floor(Math.random() * alphabet.length);
+    const letter = alphabet[index];
+    if (!word.toLowerCase().includes(letter.toLowerCase())) {
       extras.push(letter);
     }
   }
@@ -126,25 +140,31 @@ function start(){
   letters.push(...word.toUpperCase().split(""));
   do {
     letters = letters.sort(() => {
-      return Math.random() < .5 ? -1 : 1;
+      return Math.random() < 0.5 ? -1 : 1;
     });
-  } while(letters.join("").toLowerCase().includes(word))
+  } while (letters.join("").toLowerCase().includes(word));
 
   lettersDiv.innerHTML = "";
-  for (let i = 0; i < letters.length; i++){
+  for (let i = 0; i < letters.length; i++) {
     let letter = letters[i];
-    if(letter === " "){
+    if (letter === " ") {
       letter = "&nbsp;";
     }
     lettersDiv.innerHTML += `<button class="letter">${letter}</button>`;
   }
   inputDiv.value = "";
 
+  if (lastWord == Math.floor(words.length / 2)) {
+    const indexa = Math.floor(Math.random() * quips.length);
+    const quip = quips[indexa];
+    const utterancea = new SpeechSynthesisUtterance(quip);
+    speechSynthesis.speak(utterancea);
+  }
   const utterance = new SpeechSynthesisUtterance(`Spell the word, ${word}.`);
   speechSynthesis.speak(utterance);
   inputDiv.focus();
 }
-document.getElementById("start").addEventListener("click", ()=>{
-  document.getElementById("start").style.display = "none"
+document.getElementById("start").addEventListener("click", () => {
+  document.getElementById("start").style.display = "none";
   start();
 });
