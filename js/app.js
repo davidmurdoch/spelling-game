@@ -4,7 +4,7 @@ const quips = [
   `You're doing great! Keep going!`,
   `Nicely done! You're half way there!`,
   `I have a joke for you: What do you call a cute donut? Uh dough able!`,
-  "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was piece of cake!",
+  "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was a piece of cake!",
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
 ];
 const words = [
