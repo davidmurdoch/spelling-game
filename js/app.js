@@ -6,28 +6,32 @@ const quips = [
   `I have a joke for you: What do you call a cute donut? Uh dough able!`,
   "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was a piece of cake!",
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
+  "What do you call a boomerang that won’t come back?",
 ];
 const words = [
-  ["size", "What size shoe do you wear?"],
+  ["shown", "My excitement for Hawaii shown on my face?"],
+  ["common", "I loved the common areas at our condos in Hawaii"],
+  ["soap", "Do Hawaiians wash their hands with soap?"],
+  ["problem", 'In Hawaii they say "a\'ole pilikia" instead of "no problem".'],
+  ["quote", "Hawaii is my favorite, you can quote me on that!"],
+  ["bowling", "I want to go bowling in hawaiiiiiii."],
+  ["growth", "Disease hinders the growth of coffee."],
+  ["shone", "The sun was bright in the hawaiian skies."],
+  ["product", "Many pineapples are a product of Hawaii."],
+  ["fellowship", "Two angry girls were brought together through fellowship."],
+  [
+    "contest",
+    "My sister and I had a contest to see who could swim the fastest.",
+  ],
+  ["shadow", "At lahaina noon things may appear to have no shadow."],
+  ["coax", "My daddy had to coax me to jump off the cliff."],
+  ["scroll", "My mommy likes to scroll on her phone for hours."],
+  ["topic", "My usual topic of conversation is cliff jumping!"],
+  ["suppose", "I suppose you're right; it is not safe to jump."],
   ["visit", "I love to visit Hawaiʻi in the summer."],
-  ["polite", "He is always polite to everyone."],
-  ["deny", "No one could deny that Jemma is super cute."],
-  ["pride", "Take pride in your work."],
   ["style", "I like her style!"],
-  ["finger", "Her finger smelled like dirt."],
-  ["delight", "Visiting Hawaiʻi was a delight."],
-  ["wildlife", "Hawaiʻi doesn't have much wildlife."],
-  ["drive", "You can't drive to Hawaiʻi."],
-  ["liquid", "Mercury is a metal that is liquid a room temperature."],
-  ["kitchen", "You will find the milk in the kitchen."],
-  ["pilot", "The pilot let me sit in the cockpit."],
-  ["twilight", "Twilight in Hawaiʻi is very beautiful."],
-  ["rely", "In Hawaiʻi, they rely on fish for their food."],
-  ["type", "Mexican is my favorite type of food."],
-  ["breath", "I watched a turtle surface to take a breath of air in Hawaiʻi"],
-  ["reason", "For some reason, I jumped off a cliff in Hawaiʻi."],
-  ["inning", "She hit a double in the fourth inning."],
-  ["surprise", "I like to surprise my sister with gifts."],
+  ["though", "Even though it was raining, we went for a hike."],
+  ["clothes", "Zebras don't wear clothes."],
 ];
 // const words = [
 //   "it",
@@ -52,7 +56,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (pauseForm) return;
 
-  if (inputDiv.value.toLowerCase().trim() === word[0]) {
+  const w = inputDiv.value.toLowerCase().trim();
+  if (!w) return;
+  if (w === word[0]) {
     pauseForm = true;
     const utterance = new SpeechSynthesisUtterance("Correct!");
     speechSynthesis.speak(utterance);
@@ -69,6 +75,10 @@ form.addEventListener("submit", (e) => {
   } else {
     const utterance = new SpeechSynthesisUtterance("Incorrect");
     speechSynthesis.speak(utterance);
+    pauseForm = true;
+    setTimeout(() => {
+      pauseForm = false;
+    }, 2000);
   }
 });
 
@@ -108,9 +118,8 @@ lettersDiv.addEventListener("click", (e) => {
 document
   .getElementById("difficultyLevelInput")
   .addEventListener("change", () => {
-    difficultyLevel =
-      parseInt(document.getElementById("difficultyLevelInput").value) ||
-      difficultyLevel;
+    const d = parseInt(document.getElementById("difficultyLevelInput").value);
+    difficultyLevel = isNaN(d) ? difficultyLevel : d;
     difficultyLevel = Math.min(difficultyLevel, 5);
     difficultyLevel = Math.max(difficultyLevel, 0);
     document.getElementById("difficultyLevelInput").value = difficultyLevel;
@@ -147,7 +156,11 @@ function start() {
 
   draw(word);
 
-  if (lastWord == Math.floor(words.length / 2)) {
+  let dividend = 2;
+  if (words.length > 15) {
+    dividend = 3;
+  }
+  if (lastWord != 0 && lastWord % Math.floor(words.length / dividend) === 0) {
     const indexa = Math.floor(Math.random() * quips.length);
     const quip = quips[indexa];
     const utterancea = new SpeechSynthesisUtterance(quip);
@@ -158,10 +171,11 @@ function start() {
 
   lastWord++;
 
-  const utterance = new SpeechSynthesisUtterance(
-    `Spell the word, ${word[0]}. ${word[1]}`
-  );
+  const utterance = new SpeechSynthesisUtterance(`Spell the word, ${word[0]}.`);
   speechSynthesis.speak(utterance);
+  const utterance2 = new SpeechSynthesisUtterance(word[1]);
+  utterance2.rate = 1.2;
+  speechSynthesis.speak(utterance2);
   inputDiv.focus();
 }
 function draw(word) {
