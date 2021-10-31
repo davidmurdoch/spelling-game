@@ -6,7 +6,7 @@ const quips = [
   `I have a joke for you: What do you call a cute donut? Uh dough able!`,
   "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was a piece of cake!",
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
-  "What do you call a boomerang that won’t come back?",
+  "What do you call a boomerang that won’t come back? A stick.",
   "I have a joke for you: What do you get when you put 3 ducks in a box? A box of quakers!",
 ];
 const words = [
