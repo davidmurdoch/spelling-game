@@ -20,7 +20,7 @@ const words = [
   ["startled", "The snake in the grass startled me"],
   ["scorekeeper", "I am the scorekeeper for the soccer team"],
   ["ordered", "I ordered 2 pumpkin heads."],
-  ["forest", "My sister and I live in the mud"],
+  ["forest", "My sister and I live in the forest."],
   ["supporting", "My mom is supporting in my mud living."],
   ["adores", "My mommy adores me."],
   ["prairie", "I want to watch The Little House on the Prairie."],
