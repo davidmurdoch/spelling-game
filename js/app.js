@@ -29,7 +29,7 @@ const words = [
   ["perhaps", "Perhaps you can fly. Have you tried?"],
   ["searches", "He searches high and low but never finds his toe."],
   ["servant", "The servant loves ants."],
-  ["steer", "The captain in Hawaii let me street the boat."],
+  ["steer", "The captain in Hawaii let me steer the boat."],
   ["journey", "I would like to go on a journey into space with you."],
 ];
 
