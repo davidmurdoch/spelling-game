@@ -13,7 +13,7 @@ const quips = [
 const words = [
   ["toil", "The peasants had to toil in the fields."],
   ["royal", "The Tarrons are a royal family."],
-  ["proud", "Vervatos is proud of Aja."],
+  ["proud", "Vervatos is proud of Ahja."],
   ["sprout", "My toe is growing like a sprout."],
   ["employed", "My daddy is employed by ConsenSys."],
   ["oyster", "I live in an oyster garden."],
