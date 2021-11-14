@@ -11,26 +11,13 @@ const quips = [
   "How do we know that the ocean is friendly? It waves."
 ];
 const words = [
-  ["weary", "He was weary from the rainy day"],
-  ["perfect", "The pizza bones were perfect"],
-  ["career", "I'd like to have a career in having fun."],
-  ["circle", "Our house is not a circle."],
-  ["study", "I should study spelling"],
-  ["compare", "Compare your cheese and shoes."],
-  ["fourth", "I am in the fourth grade."],
-  ["during", "I slept during class"],
-  ["library", "The bear was in the library"],
-  ["heard", "I heard the bear eat the teacher."],
-  ["appeared", "The bear appeared to be very hungry."],
-  ["squirming", "The worm was squirming in my mouth."],
-  ["purr", "The cat liked to purr."],
-  ["journal", "I have a journal for spelling."],
-  ["herd", "Olivia ran with a herd of horses."],
-  ["perhaps", "Perhaps you can fly. Have you tried?"],
-  ["searches", "He searches high and low but never finds his toe."],
-  ["servant", "The servant loves ants."],
-  ["steer", "The captain in Hawaii let me steer the boat."],
-  ["journey", "I would like to go on a journey into space with you."],
+  ["toil", "The peasants had to toil in the fields."],
+  ["royal", "The Tarrons are a royal family."],
+  ["proud", "Vervatos is proud of Aja."],
+  ["sprout", "My toe is growing like a sprout."],
+  ["employed", "My daddy is employed by ConsenSys."],
+  ["oyster", "I live in an oyster garden."],
+  ["powder", "The troll was turned to powder."],
 ];
 
 let word;
