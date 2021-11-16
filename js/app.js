@@ -18,10 +18,19 @@ const words = [
   ["employed", "My daddy is employed by ConsenSys."],
   ["oyster", "I live in an oyster garden."],
   ["powder", "The troll was turned to powder."],
-
   ["tower", "The Royals live in a tall tower."],
   ["moist", "Stuar's eyeballs are moist."],
   ["mouth", "Luug has a purple mouth."]
+  ["crowd", "The crowd loves me."],
+  ["surround", "Surround me with all the puppies"],
+  ["avoid", "Avoid licking the dog Luug."],
+  ["account", "I opened an account."],
+  ["ounce", "There is on ounce of lava in my mouth. Ow."],
+  ["appointing", "Coach be is appointing me as the champion."],
+  ["appeared", "Morgana appeared out of nowhere."],
+  ["improve", "I will improve my kicking skills."],
+  ["shoulder", "We stood shoulder to shoulder against Morando."],
+  ["servant", "The servant ate the ants."],
 ];
 
 let word;
