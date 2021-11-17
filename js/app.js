@@ -13,14 +13,14 @@ const quips = [
 const words = [
   ["toil", "The peasants had to toil in the fields."],
   ["royal", "The Tarrons are a royal family."],
-  ["proud", "Vervatos is proud of Ahja."],
+  ["proud", "Vervattos is proud of Ahja."],
   ["sprout", "My toe is growing like a sprout."],
   ["employed", "My daddy is employed by ConsenSys."],
   ["oyster", "I live in an oyster garden."],
   ["powder", "The troll was turned to powder."],
   ["tower", "The Royals live in a tall tower."],
   ["moist", "Stuar's eyeballs are moist."],
-  ["mouth", "Luug has a purple mouth."]
+  ["mouth", "Luug has a purple mouth."],
   ["crowd", "The crowd loves me."],
   ["surround", "Surround me with all the puppies"],
   ["avoid", "Avoid licking the dog Luug."],
