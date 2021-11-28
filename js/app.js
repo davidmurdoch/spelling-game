@@ -1,3 +1,5 @@
+let chatty = false;
+
 const audio = new Audio("./img/complete.mp3");
 const quips = [
   `By the way, you look amazing today!`,
@@ -8,29 +10,20 @@ const quips = [
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
   "What do you call a boomerang that won’t come back? A stick.",
   "I have a joke for you: What do you get when you put 3 ducks in a box? A box of quakers!",
-  "How do we know that the ocean is friendly? It waves."
+  "How do we know that the ocean is friendly? It waves.",
+  "Why did the toddler toss the butter out the window? So she could see a butter-fly.",
+  "Why couldn't the pony sing a lullaby? She was a little horse.",
 ];
 const words = [
-  ["toil", "The peasants had to toil in the fields."],
-  ["royal", "The Tarrons are a royal family."],
-  ["proud", "Vervattos is proud of Ahja."],
-  ["sprout", "My toe is growing like a sprout."],
-  ["employed", "My daddy is employed by ConsenSys."],
-  ["oyster", "I live in an oyster garden."],
-  ["powder", "The troll was turned to powder."],
-  ["tower", "The Royals live in a tall tower."],
-  ["moist", "Stuar's eyeballs are moist."],
-  ["mouth", "Luug has a purple mouth."],
-  ["crowd", "The crowd loves me."],
-  ["surround", "Surround me with all the puppies"],
-  ["avoid", "Avoid licking the dog Luug."],
-  ["account", "I opened an account."],
-  ["ounce", "There is on ounce of lava in my mouth. Ow."],
-  ["appointing", "Coach be is appointing me as the champion."],
-  ["appeared", "Morgana appeared out of nowhere."],
-  ["improve", "I will improve my kicking skills."],
-  ["shoulder", "We stood shoulder to shoulder against Morando."],
-  ["servant", "The servant ate the ants."],
+  ["hawk", "There is a hawk that like to fly with my potatoes."],
+  [
+    "ought",
+    "Five minutes ought to be enough time to smash a potato with my face.",
+  ],
+  ["hauling", "The U-Haul was hauling our stuff when my daddy hit the potato."],
+  ["launches", "The rocket launches into the ocean. Oops"],
+  ["false", "True or false? I am a rocket."],
+  ["laundry", "The rocket forgot to do it's laundry."],
 ];
 
 let word;
@@ -151,11 +144,13 @@ function start() {
   if (words.length > 15) {
     dividend = 3;
   }
-  if (lastWord != 0 && lastWord % Math.floor(words.length / dividend) === 0) {
-    const indexa = Math.floor(Math.random() * quips.length);
-    const quip = quips[indexa];
-    const utterancea = new SpeechSynthesisUtterance(quip);
-    speechSynthesis.speak(utterancea);
+  if (chatty) {
+    if (lastWord != 0 && lastWord % Math.floor(words.length / dividend) === 0) {
+      const indexa = Math.floor(Math.random() * quips.length);
+      const quip = quips[indexa];
+      const utterancea = new SpeechSynthesisUtterance(quip);
+      speechSynthesis.speak(utterancea);
+    }
   }
 
   document.getElementById("photo").src = "./img/words/" + word[0] + ".jpg";
@@ -164,9 +159,11 @@ function start() {
 
   const utterance = new SpeechSynthesisUtterance(`Spell the word, ${word[0]}.`);
   speechSynthesis.speak(utterance);
-  const utterance2 = new SpeechSynthesisUtterance(word[1]);
-  utterance2.rate = 1.2;
-  speechSynthesis.speak(utterance2);
+  if (chatty) {
+    const utterance2 = new SpeechSynthesisUtterance(word[1]);
+    utterance2.rate = 1.2;
+    speechSynthesis.speak(utterance2);
+  }
   inputDiv.focus();
 }
 function draw(word) {
