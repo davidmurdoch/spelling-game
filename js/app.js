@@ -24,6 +24,10 @@ const words = [
   ["launches", "The rocket launches into the ocean. Oops"],
   ["false", "True or false? I am a rocket."],
   ["laundry", "The rocket forgot to do it's laundry."],
+  ["crawling", "It is crawling in my skin."],
+  ["causing", "It is causing me much harm as my skin melts. Ow Ouch!"],
+  ["drawn", "I've drawn a map to the skin farm"],
+  ["hall", "The hall was on the way to the skin ball."]
 ];
 
 let word;
