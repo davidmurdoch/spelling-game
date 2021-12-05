@@ -27,7 +27,12 @@ const words = [
   ["crawling", "It is crawling in my skin."],
   ["causing", "It is causing me much harm as my skin melts. Ow Ouch!"],
   ["drawn", "I've drawn a map to the skin farm"],
-  ["hall", "The hall was on the way to the skin ball."]
+  ["hall", "The hall was on the way to the skin ball."],
+  ["sought", "He sought after the golden pancake"],
+  ["fault", "It was Mr Pancake's fault"],
+  ["stalk", "A fork stalks it's prey, the pancake."],
+  ["applesauce", "I like applesauce on my pancakes. Ew"],
+  ["exalted", "The pancake was the most exalted in all the tables."]
 ];
 
 let word;
