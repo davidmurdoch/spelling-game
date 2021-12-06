@@ -32,7 +32,10 @@ const words = [
   ["fault", "It was Mr Pancake's fault"],
   ["stalk", "A fork stalks it's prey, the pancake."],
   ["applesauce", "I like applesauce on my pancakes. Ew"],
-  ["exalted", "The pancake was the most exalted in all the tables."]
+  ["exalted", "The pancake was the most exalted in all the tables."],
+  ["faucet", "My faucet is blue."],
+  ["employed", "I am employed by Blue Yeti"],
+  ["surround", "The Blue Monsters wanted to surround the broccoli."],
 ];
 
 let word;
