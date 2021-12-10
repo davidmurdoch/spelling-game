@@ -1,4 +1,4 @@
-let chatty = false;
+let chatty = true;
 
 const audio = new Audio("./img/complete.mp3");
 const quips = [
@@ -15,27 +15,11 @@ const quips = [
   "Why couldn't the pony sing a lullaby? She was a little horse.",
 ];
 const words = [
-  ["hawk", "There is a hawk that like to fly with my potatoes."],
-  [
-    "ought",
-    "Five minutes ought to be enough time to smash a potato with my face.",
-  ],
-  ["hauling", "The U-Haul was hauling our stuff when my daddy hit the potato."],
-  ["launches", "The rocket launches into the ocean. Oops"],
-  ["false", "True or false? I am a rocket."],
-  ["laundry", "The rocket forgot to do it's laundry."],
-  ["crawling", "It is crawling in my skin."],
-  ["causing", "It is causing me much harm as my skin melts. Ow Ouch!"],
-  ["drawn", "I've drawn a map to the skin farm"],
-  ["hall", "The hall was on the way to the skin ball."],
-  ["sought", "He sought after the golden pancake"],
-  ["fault", "It was Mr Pancake's fault"],
-  ["stalk", "A fork stalks it's prey, the pancake."],
-  ["applesauce", "I like applesauce on my pancakes. Ew"],
-  ["exalted", "The pancake was the most exalted in all the tables."],
-  ["faucet", "My faucet is blue."],
-  ["employed", "I am employed by Blue Yeti"],
-  ["surround", "The Blue Monsters wanted to surround the broccoli."],
+  ["empties", "Mommy empties the trashcan in the pool."],
+  ["submitting", "The trash panda is submitting to authority."],
+  ["tidiest", "The tidiest trash can is in my mouth. Gross"],
+  ["carving", "The trash panda was caught carving his name in the water."],
+  ["copied", "Bob copied my trash. Wah?"],
 ];
 
 let word;
