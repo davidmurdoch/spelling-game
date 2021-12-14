@@ -1,4 +1,4 @@
-let chatty = true;
+let chatty = false;
 
 const audio = new Audio("./img/complete.mp3");
 const quips = [
@@ -13,13 +13,29 @@ const quips = [
   "How do we know that the ocean is friendly? It waves.",
   "Why did the toddler toss the butter out the window? So she could see a butter-fly.",
   "Why couldn't the pony sing a lullaby? She was a little horse.",
+  "What candy do bumblebees love the most? Bumble gum!"
 ];
 const words = [
-  ["empties", "Mommy empties the trashcan in the pool."],
-  ["submitting", "The trash panda is submitting to authority."],
-  ["tidiest", "The tidiest trash can is in my mouth. Gross"],
+  //["empties", "Mommy empties the trashcan in the pool."],
+  //["submitting", "The trash panda is submitting to authority."],
+  //["tidiest", "The tidiest trash can is in my mouth. Gross"],
   ["carving", "The trash panda was caught carving his name in the water."],
-  ["copied", "Bob copied my trash. Wah?"],
+  //["copied", "Bob copied my trash. Wah?"],
+  //["skies", "The skies looked like candy"],
+  ["preferred", "Jemma preferred candy over worms"],
+  ["arrived", "The candy arrived just in time for Christmas"],
+  ["solved", "I solved the mystery of the candy thief!"],
+  //["heaviest", "The heaviest candy weighs 10 times more than my house."],
+  ["rubies","I stole the rubies from the pirate"],
+  ["bouncing", "The pirate was bouncing on my head."],
+  //["prepared", "I was prepared to battle the pirate parrot."],
+  ["applied", "I applied all the ninja moves to the pirates"],
+  ["occurred", "It occurred to me, that they might not be pirates, they are my parents."],
+  ["hungrier", "I must have been hungrier than a pirate."],
+  //["exalted", "The shoe was the most exalted in all the tables."],
+  ["causing","It is causing me much harm as my shoe melts!"],
+  // ["anymore", "I don't want to eat this shoe anymore"],
+  // ["wherever","Wherever you go, there you are."],
 ];
 
 let word;
