@@ -69,7 +69,7 @@ chmod 775 $datadir
 
 # prerequisite packages
 # Get MediaInfo from MI direct rather than the OS
-wget https://mediaarea.net/repo/deb/repo-mediaarea_1.0-19_all.deb && dpkg -i repo-mediaarea_1.0-19_all.deb && apt-get update
+curl -O https://mediaarea.net/repo/deb/repo-mediaarea_1.0-19_all.deb && dpkg -i repo-mediaarea_1.0-19_all.deb && apt-get update
 apt install $app_prereq
 
 ARCH=$(dpkg --print-architecture)
@@ -85,7 +85,7 @@ case "$ARCH" in
     ;;
 esac
 echo "Downloading..."
-wget --content-disposition "$DLURL"
+curl -OJ "$DLURL"
 tar -xvzf ${app^}.*.tar.gz
 echo "Installation files downloaded and extracted"
 
