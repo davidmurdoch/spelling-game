@@ -85,8 +85,8 @@ case "$ARCH" in
     ;;
 esac
 echo "Downloading..."
-curl -OJ "$DLURL"
-tar -xvzf ${app^}.*.tar.gz
+curl -O "$DLURL" -o file.tar.gz
+tar -xvzf file.tar.gz
 echo "Installation files downloaded and extracted"
 
 # remove existing installs
