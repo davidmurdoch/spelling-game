@@ -1,4 +1,4 @@
-let chatty = false;
+let chatty = true;
 
 const audio = new Audio("./img/complete.mp3");
 const quips = [
@@ -23,7 +23,7 @@ const words = [
   ["chord", "I played this chord to calm Bumpy when he was angry."],
   ["picnic", "We had a picnic next to the watering hole!"],
   ["school", "I learned about the Jurassic era at school!"],
-  ["Christian", "How do you know that the dino was a Christian? He prays before he eats you!"],
+  ["christian", "How do you know that the dino was a Christian? He prays before he eats you!"],
   ["nickles", "I threw some nickles at the compies."],
   ["echo", "The T-Rex's roar can echo for miles"],
   ["anchor", "The boat anchor fell overboard during our escape from the Island"],
@@ -54,7 +54,7 @@ form.addEventListener("submit", (e) => {
 
   const w = inputDiv.value.toLowerCase().trim();
   if (!w) return;
-  if (w === word[0]) {
+  if (w === word[0].toLowerCase()) {
     pauseForm = true;
     const utterance = new SpeechSynthesisUtterance("Correct!");
     speechSynthesis.speak(utterance);
