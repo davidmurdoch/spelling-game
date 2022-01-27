@@ -1,4 +1,13 @@
-let chatty = false;
+let chatty = localStorage.getItem("talkative") === "false" ? false : true;
+let difficultyLevel = localStorage.getItem("difficultyLevel") == undefined ? 0 : localStorage.getItem("difficultyLevel");
+
+document.getElementById("difficultyLevelInput").value = difficultyLevel;
+document.getElementById("talkativeInput").checked = chatty;
+
+document.getElementById("talkativeInput").addEventListener("change", () => {
+  chatty = document.getElementById("talkativeInput").checked;
+  localStorage.setItem("talkative", chatty);
+});
 
 const audio = new Audio("./img/complete.mp3");
 const quips = [
@@ -42,7 +51,6 @@ const words = [
 let word;
 let lastWord = 0;
 
-let difficultyLevel = 0;
 const length = words.length;
 const lettersDiv = document.getElementById("letters");
 const speakButton = document.getElementById("speakButton");
@@ -120,6 +128,7 @@ document
     difficultyLevel = Math.min(difficultyLevel, 5);
     difficultyLevel = Math.max(difficultyLevel, 0);
     document.getElementById("difficultyLevelInput").value = difficultyLevel;
+    localStorage.setItem("difficultyLevel", difficultyLevel);
 
     draw(word);
   });
