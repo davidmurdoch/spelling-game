@@ -1,4 +1,4 @@
-let chatty = true;
+let chatty = false;
 
 const audio = new Audio("./img/complete.mp3");
 const quips = [
@@ -8,7 +8,7 @@ const quips = [
   `I have a joke for you: What do you call a cute donut? Uh dough able!`,
   "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was a piece of cake!",
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
-  "What do you call a boomerang that won’t come back? A stick.",
+  "What do you call a boomerang that won't come back? A stick.",
   "I have a joke for you: What do you get when you put 3 ducks in a box? A box of quakers!",
   "How do we know that the ocean is friendly? It waves.",
   "Why did the toddler toss the butter out the window? So she could see a butter-fly.",
@@ -16,26 +16,27 @@ const quips = [
   "What candy do bumblebees love the most? Bumble gum!"
 ];
 const words = [
-  ["cord", "I tied up the dinosaur with this cord."],
-  ["scale", "I put the dino on the scale."],
-  ["tickets", "Did you get tickets to see the dinosaurs?"],
-  ["basic", "The T-Rex is sooo basic compare to The Spiky One."],
-  ["chord", "I played this chord to calm Bumpy when he was angry."],
-  ["picnic", "We had a picnic next to the watering hole!"],
-  ["school", "I learned about the Jurassic era at school!"],
-  ["christian", "How do you know that the dino was a Christian? He prays before he eats you!"],
-  ["nickles", "I threw some nickles at the compies."],
-  ["echo", "The T-Rex's roar can echo for miles"],
-  ["anchor", "The boat anchor fell overboard during our escape from the Island"],
-  ["public", "The dinosaurs were walking around in public!"],
-  ["pocket", "I bet dinosaurs wish that had pants with a pocket"],
-  ["schedule", "I'll have to check my schedule, said the dino."],
-  ["chorus", "The raptors sang a beautiful chorus"],
-  ["chronicle", "I'm writing the chronicles of the dinosaurs"],
-  ["prepared", "I've prepared some fresh dino soup."],
-  ["applied", "The T-Rex just hasn't applied herself at school."],
-  ["character", "The indomonis rex has great character."],
-  ["chocolate", "The brown dinosaurs don't taste like chocolate!"],
+  ["fleece", "I had a cotton candy colored fleece blanket."],
+  ["ceiling", "I have a chocolate ceiling"],
+  ["cycle", "The choco cycle: melt, form, eat"],
+  ["cease", "Gummy worms never cease to amaze me."],
+  ["recite", "I will recite four elf food groups: candy, candy canes, candy corns, and syrup."],
+  ["force", "I will force myself to eat more lollipops if I have to."],
+  ["concert", "The Candy Canes are by favorite band and I hope to go to their concert on day!"],
+  ["braces", "You can't eat carmel candy if you have braces."],
+  ["glanced", "I glanced at the marshmallow, and ate it without thinking. Yum."],
+  ["citrus", "I enjoy citrus flavored cookies."],
+  ["advice", "'Eat more candy' is really good advice, if you ask me."],
+  ["decided", "I have decided to be candy."],
+  ["cypress", "The cypress tree is not candy, which makes me sad that this word is in the list this week."],
+  ["canceling", "I'm cancelling the vegetable order and replacing it with fudge."],
+  ["source", "The source of my power comes from Reese's!"],
+  ["recent", "My most recent meal was a plate full of snickers"],
+  ["christian", "My friend Christian, likes to eat Candy Canes"],
+  ["tickets", "I finally got tickets to the Candy Canes concert"],
+  ["succeed", "I would succeed in making the worlds best chocolate, but I keep eating it all before the judges could try any."],
+  ["sentence", "I am supposed use the word sentence in a sentence. Candy."]
+
 ];
 
 let word;
