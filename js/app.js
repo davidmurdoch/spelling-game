@@ -29,7 +29,7 @@ const words = [
   ["ceiling", "I have a chocolate ceiling"],
   ["cycle", "The choco cycle: melt, form, eat"],
   ["cease", "Gummy worms never cease to amaze me."],
-  ["recite", "I will recite four elf food groups: candy, candy canes, candy corns, and syrup."],
+  ["recite", "I will recite the four elf food groups: candy, candy canes, candy corns, and syrup."],
   ["force", "I will force myself to eat more lollipops if I have to."],
   ["concert", "The Candy Canes are by favorite band and I hope to go to their concert on day!"],
   ["braces", "You can't eat carmel candy if you have braces."],
