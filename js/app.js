@@ -1,6 +1,8 @@
+let numWords = localStorage.getItem("numWords") == undefined ? 20 : localStorage.getItem("numWords");
 let chatty = localStorage.getItem("talkative") === "false" ? false : true;
 let difficultyLevel = localStorage.getItem("difficultyLevel") == undefined ? 0 : localStorage.getItem("difficultyLevel");
 
+document.getElementById("numWords").value = numWords;
 document.getElementById("difficultyLevelInput").value = difficultyLevel;
 document.getElementById("talkativeInput").checked = chatty;
 
@@ -24,7 +26,7 @@ const quips = [
   "Why couldn't the pony sing a lullaby? She was a little horse.",
   "What candy do bumblebees love the most? Bumble gum!"
 ];
-const words = [
+const _words = [
   ["fleece", "I had a cotton candy colored fleece blanket."],
   ["ceiling", "I have a chocolate ceiling"],
   ["cycle", "The choco cycle: melt, form, eat"],
@@ -45,13 +47,13 @@ const words = [
   ["tickets", "I finally got tickets to the Candy Canes concert"],
   ["succeed", "I would succeed in making the worlds best chocolate, but I keep eating it all before the judges could try any."],
   ["sentence", "I am supposed use the word sentence in a sentence. Candy."]
-
 ];
+let words = [];
 
 let word;
 let lastWord = 0;
 
-const length = words.length;
+
 const lettersDiv = document.getElementById("letters");
 const speakButton = document.getElementById("speakButton");
 const inputDiv = document.getElementById("input");
@@ -133,13 +135,36 @@ document
     draw(word);
   });
 
+  document
+  .getElementById("numWords")
+  .addEventListener("change", () => {
+    const d = parseInt(document.getElementById("numWords").value);
+    numWords = isNaN(d) ? numWords : d;
+    numWords = Math.min(numWords, 20);
+    numWords = Math.max(numWords, 0);
+    document.getElementById("numWords").value = numWords;
+    localStorage.setItem("numWords", numWords);
+
+    draw(word);
+  });
+
 function begin() {
   lastWord = 0;
   word = null;
   document.getElementById("sprite").style.left = 0;
-  words.sort(() => {
+  let tempWords = [..._words];
+  tempWords = tempWords.sort(() => {
     return Math.random() < 0.5 ? -1 : 1;
   });
+  let repeatTimes = (_words.length / Math.floor(numWords));
+  tempWords = tempWords.slice(0, numWords);
+  words = [];
+  for (let i = 0; i < repeatTimes; i++) {
+    for (let j = 0; j < tempWords.length; j++) {
+      words.push(tempWords[j]);
+    }
+  }
+  
   start();
 }
 
@@ -152,6 +177,7 @@ document.getElementById("start-over").addEventListener("click", (e) => {
 
 function start() {
   word = words[lastWord];
+  debugger;
 
   if (lastWord == words.length) {
     audio.play();
