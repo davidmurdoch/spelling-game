@@ -27,26 +27,26 @@ const quips = [
   "What candy do bumblebees love the most? Bumble gum!"
 ];
 const _words = [
-  ["fleece", "I had a cotton candy colored fleece blanket."],
-  ["ceiling", "I have a chocolate ceiling"],
-  ["cycle", "The choco cycle: melt, form, eat"],
-  ["cease", "Gummy worms never cease to amaze me."],
-  ["recite", "I will recite the four elf food groups: candy, candy canes, candy corns, and syrup."],
-  ["force", "I will force myself to eat more lollipops if I have to."],
-  ["concert", "The Candy Canes are by favorite band and I hope to go to their concert on day!"],
-  ["braces", "You can't eat carmel candy if you have braces."],
-  ["glanced", "I glanced at the marshmallow, and ate it without thinking. Yum."],
-  ["citrus", "I enjoy citrus flavored cookies."],
-  ["advice", "'Eat more candy' is really good advice, if you ask me."],
+  ["sponge", "The macaw cleaned up its mess with my sponge"],
+  ["pledge", "If you recite the monkey pledge you must protect the ba na naz."],
+  ["change", "The caterpillar will change into a beautiful butterfly."],
+  ["storage", "A camel uses its humps as storage for water"],
+  ["gerbil", "I fed a gerbil to my pet snake"],
+  ["ridge", "Ruffles have ridges"],
+  ["package", "My package of giant elephants has arrived! muahahaha"],
+  ["orange", "My pet bird was orange, but now he is blue."],
+  ["message", "I put a message in a bottle, but a whale ate it."],
+  ["ledge", "The bullet ant jumped over the ledge to save the lady."],
+  ["courage", "Animals cannot have courage, because they do not understand the risks of danger"],
+  ["giraffe", "The giraffe at the Louisville zoo tried to eat my dad's head."],
+  ["bandage", "We had to put a bandage on the duck billed platypus after the lion bit it."],
+  ["general", "Penguins don't particularly like flying bugs, in general."],
+  ["image", "The anteater drew an image of almonds"],
+  ["hinge", "The waterbear accidentally installed the hinge on its head!"],
   ["decided", "I have decided to be candy."],
-  ["cypress", "The cypress tree is not candy, which makes me sad that this word is in the list this week."],
-  ["canceling", "I'm cancelling the vegetable order and replacing it with fudge."],
-  ["source", "The source of my power comes from Reese's!"],
-  ["recent", "My most recent meal was a plate full of snickers"],
-  ["christian", "My friend Christian, likes to eat Candy Canes"],
-  ["tickets", "I finally got tickets to the Candy Canes concert"],
-  ["succeed", "I would succeed in making the worlds best chocolate, but I keep eating it all before the judges could try any."],
-  ["sentence", "I am supposed use the word sentence in a sentence. Candy."]
+  ["force", "I will force myself to eat more lollipops if I have to."],
+  ["suggest", "I suggest we don't climb into the sharks mouth. period. ha"],
+  ["knowledge", "Elephants must have a lot of knowledge, since they never forget"]
 ];
 let words = [];
 
