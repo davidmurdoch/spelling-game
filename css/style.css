@@ -1,7 +1,7 @@
 body {
   text-align: center;
   background: green;
-  font-family: "Merienda", cursive;
+  font-family: "Comic Sans", "Merienda", cursive;
 }
 #main button {
   padding: 0.5em;
@@ -12,11 +12,13 @@ body {
   padding: 0.5em;
   margin: 0.5em;
   font-size: 4em;
+  vertical-align: baseline;
+  line-height: 1.5em;
 }
 input,
 button,
 select {
-  font-family: "Merienda", cursive;
+  font-family: "Comic Sans", "Merienda", cursive;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -25,6 +27,7 @@ select {
 }
 
 #settings {
+  border-radius: 10px;
   position: absolute;
   background: white;
   padding: 1em;

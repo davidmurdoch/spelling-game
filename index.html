@@ -29,12 +29,24 @@
   </div>
   <div id="app">
     <div id="settings">
-      # Words:
-      <input id="numWords" value="0" type="number" min="0" max="20" /><br />
-      Difficulty:
-      <input id="difficultyLevelInput" value="0" type="number" min="0" max="5" /><br />
-      Talkative:
-      <input id="talkativeInput" type="checkbox" />
+      <label>
+        # of Words to Repeat:
+        <input id="numWords" value="0" type="number" min="0" max="20" /><br />
+      </label>
+      <label>
+        Difficulty Level:
+        <input id="difficultyLevelInput" value="0" type="number" min="0" max="5" /><br />
+      </label>
+      <label>
+        Talkative (sentences, jokes):
+        <input id="talkativeInput" type="checkbox" /><br />
+      </label>
+      <label>
+        Background Color:
+        <input id="bgColor" type="color" />
+      </label>
+      <hr />
+      <button id="start-over-link">Start Over</a>
     </div>
     <!-- Add your site or application content here -->
     <div id="main">

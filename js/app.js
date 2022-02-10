@@ -2,9 +2,19 @@ let numWords = localStorage.getItem("numWords") == undefined ? 20 : localStorage
 let chatty = localStorage.getItem("talkative") === "false" ? false : true;
 let difficultyLevel = localStorage.getItem("difficultyLevel") == undefined ? 0 : localStorage.getItem("difficultyLevel");
 
+let bgColor = localStorage.getItem("bgColor") === undefined ? "green" : localStorage.getItem("bgColor");
+
 document.getElementById("numWords").value = numWords;
 document.getElementById("difficultyLevelInput").value = difficultyLevel;
 document.getElementById("talkativeInput").checked = chatty;
+document.getElementById("bgColor").value = bgColor;
+
+
+function setBgColor(color){
+  document.getElementById("start").style.backgroundColor = color;
+  document.body.style.backgroundColor = color;
+}
+setBgColor(bgColor);
 
 document.getElementById("talkativeInput").addEventListener("change", () => {
   chatty = document.getElementById("talkativeInput").checked;
@@ -20,33 +30,32 @@ const quips = [
   "I have a joke for you: Why did the student eat his homework? Because it the teacher said it was a piece of cake!",
   "I have a joke for you: Why was 6 afraid of 7? Because seven eight nine!",
   "What do you call a boomerang that won't come back? A stick.",
-  "I have a joke for you: What do you get when you put 3 ducks in a box? A box of quakers!",
+  "I have a joke for you: What do you get when you put 3 ducks in a box? A box of quackers!",
   "How do we know that the ocean is friendly? It waves.",
   "Why did the toddler toss the butter out the window? So she could see a butter-fly.",
   "Why couldn't the pony sing a lullaby? She was a little horse.",
   "What candy do bumblebees love the most? Bumble gum!"
 ];
 const _words = [
-  ["sponge", "The macaw cleaned up its mess with my sponge"],
-  ["pledge", "If you recite the monkey pledge you must protect the ba na naz."],
-  ["change", "The caterpillar will change into a beautiful butterfly."],
-  ["storage", "A camel uses its humps as storage for water"],
-  ["gerbil", "I fed a gerbil to my pet snake"],
-  ["ridge", "Ruffles have ridges"],
-  ["package", "My package of giant elephants has arrived! muahahaha"],
-  ["orange", "My pet bird was orange, but now he is blue."],
-  ["message", "I put a message in a bottle, but a whale ate it."],
-  ["ledge", "The bullet ant jumped over the ledge to save the lady."],
-  ["courage", "Animals cannot have courage, because they do not understand the risks of danger"],
-  ["giraffe", "The giraffe at the Louisville zoo tried to eat my dad's head."],
-  ["bandage", "We had to put a bandage on the duck billed platypus after the lion bit it."],
-  ["general", "Penguins don't particularly like flying bugs, in general."],
-  ["image", "The anteater drew an image of almonds"],
-  ["hinge", "The waterbear accidentally installed the hinge on its head!"],
-  ["decided", "I have decided to be candy."],
-  ["force", "I will force myself to eat more lollipops if I have to."],
-  ["suggest", "I suggest we don't climb into the sharks mouth. period. ha"],
-  ["knowledge", "Elephants must have a lot of knowledge, since they never forget"]
+  ["sign", "I'll make a sign for Grace's birthday!"],
+  ["doubted", "I never doubted you, Miles."],
+  ["hymn", "Vivi will sing the hymn of the day."],
+  ["islands", "Claire and I are on the islands."],
+  ["calm", "Lidia is calm and collected."],
+  ["debt", "Mrs Richardson has a debt to pay."],
+  ["scene", "Nora has a scene to play."],
+  ["autumn", "Gracelyn loves autumn."],
+  ["palm", "Luca has a palm tree."],
+  ["designing", "Luke is designing some cartoon animations on his computer."],
+  // ["column", "Natalia has a column in her room."],
+  // ["scissors", "Josiah has scissors."],
+  // ["almond", "Ryker has an almond."],
+  // ["subtle", "Elliana is subtle and thoughtful."],
+  // ["scenery", "G.G. has scenery to decorate."],
+  // ["message", "Mariah has a message to send."],
+  // ["change", "Mackenzie has a change to make."],
+  // ["rhythm", "Cadence has a rhythm to her song."],
+  // ["rhyme", "Olivia does a good rhyme."]
 ];
 let words = [];
 
@@ -136,6 +145,14 @@ document
   });
 
   document
+  .getElementById("bgColor")
+  .addEventListener("change", () => {
+    bgColor = document.getElementById("bgColor").value
+    setBgColor(bgColor);
+    localStorage.setItem("bgColor", bgColor);
+  });
+
+  document
   .getElementById("numWords")
   .addEventListener("change", () => {
     const d = parseInt(document.getElementById("numWords").value);
@@ -145,7 +162,7 @@ document
     document.getElementById("numWords").value = numWords;
     localStorage.setItem("numWords", numWords);
 
-    draw(word);
+    startOver();
   });
 
 function begin() {
@@ -168,12 +185,15 @@ function begin() {
   start();
 }
 
-document.getElementById("start-over").addEventListener("click", (e) => {
-  e.preventDefault();
+const startOver = (e) => {
+  e && e.preventDefault();
   begin();
   document.getElementById("won").style.display = "none";
   document.getElementById("app").style.display = "block";
-});
+}
+document.getElementById("start-over").addEventListener("click", startOver);
+document.getElementById("start-over-link").addEventListener("click", startOver);
+
 
 function start() {
   word = words[lastWord];
