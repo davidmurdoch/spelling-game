@@ -47,15 +47,15 @@ const _words = [
   ["autumn", "Gracelyn loves autumn."],
   ["palm", "Luca has a palm tree."],
   ["designing", "Luke is designing some cartoon animations on his computer."],
-  // ["column", "Natalia has a column in her room."],
-  // ["scissors", "Josiah has scissors."],
-  // ["almond", "Ryker has an almond."],
-  // ["subtle", "Elliana is subtle and thoughtful."],
-  // ["scenery", "G.G. has scenery to decorate."],
-  // ["message", "Mariah has a message to send."],
-  // ["change", "Mackenzie has a change to make."],
-  // ["rhythm", "Cadence has a rhythm to her song."],
-  // ["rhyme", "Olivia does a good rhyme."]
+  ["column", "Natalia has a column in her room."],
+  ["scissors", "Josiah has scissors."],
+  ["almond", "Ryker has an almond."],
+  ["subtle", "Elliana is subtle and thoughtful."],
+  ["scenery", "G.G. has scenery to decorate."],
+  ["message", "Mariah has a message to send."],
+  ["change", "Mackenzie has a change to make."],
+  ["rhythm", "Cadence has a rhythm to her song."],
+  ["rhyme", "Olivia does a good rhyme."]
 ];
 let words = [];
 
@@ -197,7 +197,6 @@ document.getElementById("start-over-link").addEventListener("click", startOver);
 
 function start() {
   word = words[lastWord];
-  debugger;
 
   if (lastWord == words.length) {
     audio.play();
