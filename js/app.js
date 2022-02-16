@@ -52,6 +52,7 @@ const _words = [
   ["almond", "Ryker has an almond."],
   ["subtle", "Elliana is subtle and thoughtful."],
   ["scenery", "G.G. has scenery to decorate."],
+  ["reign", "The reign of the king is over."],
   ["message", "Mariah has a message to send."],
   ["change", "Mackenzie has a change to make."],
   ["rhythm", "Cadence has a rhythm to her song."],
