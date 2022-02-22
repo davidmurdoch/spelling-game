@@ -37,26 +37,48 @@ const quips = [
   "What candy do bumblebees love the most? Bumble gum!"
 ];
 const _words = [
-  ["sign", "I'll make a sign for Grace's birthday!"],
-  ["doubted", "I never doubted you, Miles."],
-  ["hymn", "Vivi will sing the hymn of the day."],
-  ["islands", "Claire and I are on the islands."],
-  ["calm", "Lidia is calm and collected."],
-  ["debt", "Mrs Richardson has a debt to pay."],
-  ["scene", "Nora has a scene to play."],
-  ["autumn", "Gracelyn loves autumn."],
-  ["palm", "Luca has a palm tree."],
-  ["designing", "Luke is designing some cartoon animations on his computer."],
-  ["column", "Natalia has a column in her room."],
-  ["scissors", "Josiah has scissors."],
-  ["almond", "Ryker has an almond."],
-  ["subtle", "Elliana is subtle and thoughtful."],
-  ["scenery", "G.G. has scenery to decorate."],
-  ["reign", "The reign of the king is over."],
-  ["message", "Mariah has a message to send."],
-  ["change", "Mackenzie has a change to make."],
-  ["rhythm", "Cadence has a rhythm to her song."],
-  ["rhyme", "Olivia does a good rhyme."]
+  // Nora
+  ["front", "Nora sits in the front of the classroom."],
+  // Maria
+  ["double", "Double Maria's points."],
+  // Grace
+  ["money", "Give Grace some money!"],
+  // Olivia
+  ["country", "Olivia is from the country."],
+  // V.V.
+  ["month", "I don't think V.V's birthday is in the month of January."],
+  // Riker
+  ["young", "Riker is young compared to his brother."],
+  // Eliana
+  ["wonder", "Eliana's story made me wonder."],
+  // Miles
+  ["touchdown", "Miles scored a touchdown."],
+  // Luca
+  ["dozen", "Luca ate a dozen cookies."],
+  // Claire
+  ["cover", "Claire covered herself in a blanket."],
+  // Natalia
+  ["couple", "A couple of spiders made Natalia's hair stand up."],
+  // Olivia
+  ["monkey", "Olivia's monkey is a monkey."],
+  // Luke
+  ["rough", "Luke had a rough day."],
+  // Cadence
+  ["tough", "Cadence is tough."],
+  // G.G.
+  ["shovel", "The shovel has a G.G. in it."],
+  // Josiah
+  ["cousin", "Josiah's cousin really has some big teeth."],
+
+  // Mackenzie
+  ["designing", "Mackenzie is designing a new website."],
+  // Lidia
+  ["hymn", "Lidia sang a hymn."],
+
+  // Lincoln
+  ["among", "Lincoln is among the most popular people in the world."],
+  // Gracelyn and Mrs. RIchardson
+  ["company", "Gracelyn and Mrs. Richardson are in the same company."],
 ];
 let words = [];
 
