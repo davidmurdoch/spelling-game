@@ -39,8 +39,8 @@ const quips = [
 const _words = [
   // Nora
   ["front", "Nora sits in the front of the classroom."],
-  // Maria
-  ["double", "Double Maria's points."],
+  // Mariah
+  ["double", "Double Mariah's points."],
   // Grace
   ["money", "Give Grace some money!"],
   // Olivia
