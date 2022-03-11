@@ -36,49 +36,52 @@ const quips = [
   "Why couldn't the pony sing a lullaby? She was a little horse.",
   "What candy do bumblebees love the most? Bumble gum!"
 ];
+
+
+// my favorite star wars character is 
 const _words = [
-  // Nora
-  ["front", "Nora sits in the front of the classroom."],
-  // Mariah
-  ["double", "Double Mariah's points."],
-  // Grace
-  ["money", "Give Grace some money!"],
-  // Olivia
-  ["country", "Olivia is from the country."],
-  // V.V.
-  ["month", "I don't think V.V's birthday is in the month of January."],
-  // Riker
-  ["young", "Riker is young compared to his brother."],
-  // Eliana
-  ["wonder", "Eliana's story made me wonder."],
-  // Miles
-  ["touchdown", "Miles scored a touchdown."],
-  // Luca
-  ["dozen", "Luca ate a dozen cookies."],
-  // Claire
-  ["cover", "Claire covered herself in a blanket."],
-  // Natalia
-  ["couple", "A couple of spiders made Natalia's hair stand up."],
-  // Olivia
-  ["monkey", "Olivia's monkey is a monkey."],
+  // Grogu
+  ["cookie", "Grogu loves cookies."],
+  // The Mandalorian
+  ["skiing", "The Mandalorian loves to ski."],
+  // Anakin Skywalker
+  ["belief", "Anakin Skywalker believes in the force."],
+  // Rey
+  ["honey", "Rey loves honey."],
+  // Leia
+  ["turkey", "Leia couldn't finish eating the whole turkey."],
   // Luke
-  ["rough", "Luke had a rough day."],
-  // Cadence
-  ["tough", "Cadence is tough."],
-  // G.G.
-  ["shovel", "The shovel has a G.G. in it."],
-  // Josiah
-  ["cousin", "Josiah's cousin really has some big teeth."],
+  ["brief", "He only spoke for a brief moment, but when he did Luke listened to him."],
+  // Darth Vader
+  ["kitchen", "Darth Vader loves to cook in the kitchen."],
+  // Chewbacca
+  ["goalie", "Chewbacca is a goalie."],
+  // Darth Maul
+  ["believe", "Darth Maul believes in the force."],
+  // C3PO
+  ["valley", "C3PO was found blown to bits in the valley."],
+  // R2D2
+  ["machine", "R2D2 is a machine, but we love him anyway."],
+  // Jabba the Hutt
+  ["achieve", "Jabba the Hutt achieved his goal."],
+  // The Ewoks
+  ["police", "The Ewoks are the police."],
+  // the jawas
+  ["niece", "The Jawas came to be the niece of the queen. What?"],
+  // Obi-Wan Kenobi
+  ["relief", "Obi-Wan Kenobi was relieved of his burden."],
+  // Mace Wendu
+  ["volleyball", "Mace Wendu loves to play volleyball."],
 
-  // Mackenzie
-  ["designing", "Mackenzie is designing a new website."],
-  // Lidia
-  ["hymn", "Lidia sang a hymn."],
+  // Senator Palpatine
+  ["wonder", "I wonder how Senator Palpatine hide himself form the Jedi all those years."],
+  // The Stormtroopers
+  ["double", "The Stormtroopers are double agents."],
 
-  // Lincoln
-  ["among", "Lincoln is among the most popular people in the world."],
-  // Gracelyn and Mrs. RIchardson
-  ["company", "Gracelyn and Mrs. Richardson are in the same company."],
+  // Poe Dameron
+  ["recipe", "Poe Dameron gave us his recipe for the death star."],
+  // Kylo Ren
+  ["spaghetti", "Kylo Ren loves to smoosh spaghetti on people faces."],
 ];
 let words = [];
 
