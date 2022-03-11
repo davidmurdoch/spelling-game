@@ -53,35 +53,35 @@ const _words = [
   // Luke
   ["brief", "He only spoke for a brief moment, but when he did Luke listened to him."],
   // Darth Vader
-  ["kitchen", "Darth Vader loves to cook in the kitchen."],
+  ["keychain", "Darth Vader stole my keychain."],
   // Chewbacca
   ["goalie", "Chewbacca is a goalie."],
-  // Darth Maul
-  ["believe", "Darth Maul believes in the force."],
+  // Yoda
+  ["believe", "Yoda believes in the force."],
   // C3PO
-  ["valley", "C3PO was found blown to bits in the valley."],
+  ["valley", "C3PO was lost in the desert valley."],
   // R2D2
   ["machine", "R2D2 is a machine, but we love him anyway."],
-  // Jabba the Hutt
-  ["achieve", "Jabba the Hutt achieved his goal."],
+  // Young Ani
+  ["achieve", "Young Ani achieved his goal."],
   // The Ewoks
   ["police", "The Ewoks are the police."],
-  // the jawas
-  ["niece", "The Jawas came to be the niece of the queen. What?"],
+  // Jas Emari
+  ["niece", "Jas Emari was the niece of bounty hunter Sugi. What?"],
   // Obi-Wan Kenobi
   ["relief", "Obi-Wan Kenobi was relieved of his burden."],
-  // Mace Wendu
-  ["volleyball", "Mace Wendu loves to play volleyball."],
+  // BB8
+  ["volleyball", "BB8 was used as a volleyball when the Jawas couldn't find one."],
 
   // Senator Palpatine
-  ["wonder", "I wonder how Senator Palpatine hide himself form the Jedi all those years."],
+  ["wonder", "I wonder how Senator Palpatine hid himself form the Jedi all those years."],
   // The Stormtroopers
   ["double", "The Stormtroopers are double agents."],
 
   // Poe Dameron
   ["recipe", "Poe Dameron gave us his recipe for the death star."],
   // Kylo Ren
-  ["spaghetti", "Kylo Ren loves to smoosh spaghetti on people faces."],
+  ["spaghetti", "Kylo Ren loves to smoosh spaghetti on people's faces."],
 ];
 let words = [];
 
