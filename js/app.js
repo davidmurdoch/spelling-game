@@ -40,48 +40,48 @@ const quips = [
 
 // my favorite star wars character is 
 const _words = [
-  // Grogu
-  ["cookie", "Grogu loves cookies."],
-  // The Mandalorian
-  ["skiing", "The Mandalorian loves to ski."],
-  // Anakin Skywalker
-  ["belief", "Anakin Skywalker believes in the force."],
-  // Rey
-  ["honey", "Rey loves honey."],
-  // Leia
-  ["turkey", "Leia couldn't finish eating the whole turkey."],
-  // Luke
-  ["brief", "He only spoke for a brief moment, but when he did Luke listened to him."],
-  // Darth Vader
-  ["keychain", "Darth Vader stole my keychain."],
-  // Chewbacca
-  ["goalie", "Chewbacca is a goalie."],
-  // Yoda
-  ["believe", "Yoda believes in the force."],
-  // C3PO
-  ["valley", "C3PO was lost in the desert valley."],
-  // R2D2
-  ["machine", "R2D2 is a machine, but we love him anyway."],
-  // Young Ani
-  ["achieve", "Young Ani achieved his goal."],
-  // The Ewoks
-  ["police", "The Ewoks are the police."],
-  // Jas Emari
-  ["niece", "Jas Emari was the niece of bounty hunter Sugi. What?"],
-  // Obi-Wan Kenobi
-  ["relief", "Obi-Wan Kenobi was relieved of his burden."],
-  // BB8
-  ["volleyball", "BB8 was used as a volleyball when the Jawas couldn't find one."],
+  // Spy
+  ["secret", "I'm a secret spy."],
+  // Picture
+  ["lizard", "I took a picture of a lizard."],
+  // Shoes
+  ["polish", "I polish my shoes with a toothbrush."],
+  // Car
+  ["oven", "I drive a car in the oven."],
+  // Dog
+  ["exit", "I'm a dog that can exit."],
+  // Cat
+  ["human", "I'm a cat that can be a human."],
+  // Bird
+  ["program", "I'm a bird that can program."],
+  // Fish
+  ["salad", "I'm a fish that can make a salad."],
+  // Cow
+  ["moment", "For a moment, I thought I was a cow."],
+  // Mouse
+  ["focus", "If you focus hard enough, you will find your mouse."],
+  // Horse
+  ["rapid", "The horse has undergone a rapid transformation."],
+  // Elephant
+  ["item", "I'm an elephant that can hold an item."],
+  // Monkey
+  ["vibrate", "I'm a monkey that can vibrate."],
+  // Pig
+  ["climate", "Climate change is a big problem for pigs."],
+  // Sheep
+  ["novel", "I'm a sheep and I'm writing a novel about sheep that can fly"],
+  // Sloth
+  ["unite", "The sloths of the world have united and formed a great army."],
 
-  // Senator Palpatine
-  ["wonder", "I wonder how Senator Palpatine hid himself form the Jedi all those years."],
-  // The Stormtroopers
-  ["double", "The Stormtroopers are double agents."],
+  // Star Wars
+  ["belief", "His belief in the force is undeniable."],
+  // Star Trek
+  ["machine", "The machine is a machine."],
 
-  // Poe Dameron
-  ["recipe", "Poe Dameron gave us his recipe for the death star."],
-  // Kylo Ren
-  ["spaghetti", "Kylo Ren loves to smoosh spaghetti on people's faces."],
+  // Harry Potter
+  ["evening", "I'm an evening owl and I'm writing a novel about owl that can fly"],
+  // The Lion King
+  ["between", "I'm a lion and I'm between the lion and the lioness."],
 ];
 let words = [];
 
