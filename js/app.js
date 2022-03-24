@@ -40,48 +40,37 @@ const quips = [
 
 // my favorite star wars character is 
 const _words = [
-  // Spy
-  ["secret", "I'm a secret spy."],
-  // Picture
-  ["lizard", "I took a picture of a lizard."],
-  // Shoes
-  ["polish", "I polish my shoes with a toothbrush."],
-  // Car
-  ["oven", "I drive a car in the oven."],
-  // Dog
-  ["exit", "I'm a dog that can exit."],
-  // Cat
-  ["human", "I'm a cat that can be a human."],
-  // Bird
-  ["program", "I'm a bird that can program."],
-  // Fish
-  ["salad", "I'm a fish that can make a salad."],
-  // Cow
-  ["moment", "For a moment, I thought I was a cow."],
-  // Mouse
-  ["focus", "If you focus hard enough, you will find your mouse."],
-  // Horse
-  ["rapid", "The horse has undergone a rapid transformation."],
-  // Elephant
-  ["item", "I'm an elephant that can hold an item."],
-  // Monkey
-  ["vibrate", "I'm a monkey that can vibrate."],
-  // Pig
-  ["climate", "Climate change is a big problem for pigs."],
-  // Sheep
-  ["novel", "I'm a sheep and I'm writing a novel about sheep that can fly"],
-  // Sloth
-  ["unite", "The sloths of the world have united and formed a great army."],
-
-  // Star Wars
-  ["belief", "His belief in the force is undeniable."],
-  // Star Trek
-  ["machine", "The machine is a machine."],
-
-  // Harry Potter
-  ["evening", "I'm an evening owl and I'm writing a novel about owl that can fly"],
-  // The Lion King
-  ["between", "I'm a lion and I'm between the lion and the lioness."],
+  // ["word", "sentence"],
+  ["jacket", "I'm wearing a jacket."],
+  ["children", "I have children."],
+  ["kingdom", "I live in a kingdom."],
+  ["complete", "Give me a complete sentence."],
+  ["pumpkin", "The hippo's name is Pumpkin."],
+  ["dolphin", "The dolphin is a planet."],
+  ["rather", "Would your rather eat chocolate or ice cream? cake."],
+  ["farther", "No, I am not farther than you."],
+  // head
+  ["sandwich", "I put the sandwich in my head."],
+  // foot
+  ["lobster", "I kicked the lobster with my left foot."],
+  // hand
+  ["inspect", "I inspected the hand."],
+  // Lance Armstrong
+  ["athlete", "Tony Hawk's favorite athelete is Lance Armstrong."],
+  // leg
+  ["whether", "I will eat the turkey leg whether it is cold or hot."],
+  // mouth
+  ["complain", "I am complaining about the mouth."],
+  // eye
+  ["instant", "I will eat the instant eye."],
+  // nose
+  ["program", "I will program the nose."],
+  // ear
+  ["polish", "I will polish the ear."],
+  // tongue
+  ["profit", "How much profit did you make today?"],
+  // prophet
+  ["prophet", "The prophet told me that I will eat the prophet."],
 ];
 let words = [];
 
