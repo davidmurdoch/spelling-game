@@ -71,6 +71,8 @@ const _words = [
   ["profit", "How much profit did you make today?"],
   // prophet
   ["prophet", "The prophet told me that I will eat the prophet."],
+  // dinosaur
+  ["purchase", "I will purchase the dinosaur."],
 ];
 let words = [];
 
