@@ -40,39 +40,26 @@ const quips = [
 
 // my favorite star wars character is 
 const _words = [
-  // ["word", "sentence"],
-  ["jacket", "I'm wearing a jacket."],
-  ["children", "I have children."],
-  ["kingdom", "I live in a kingdom."],
-  ["complete", "Give me a complete sentence."],
-  ["pumpkin", "The hippo's name is Pumpkin."],
-  ["dolphin", "The dolphin is a planet."],
-  ["rather", "Would your rather eat chocolate or ice cream? cake."],
-  ["farther", "No, I am not farther than you."],
-  // head
-  ["sandwich", "I put the sandwich in my head."],
-  // foot
-  ["lobster", "I kicked the lobster with my left foot."],
-  // hand
-  ["inspect", "I inspected the hand."],
-  // Lance Armstrong
-  ["athlete", "Tony Hawk's favorite athelete is Lance Armstrong."],
-  // leg
-  ["whether", "I will eat the turkey leg whether it is cold or hot."],
-  // mouth
-  ["complain", "I am complaining about the mouth."],
-  // eye
-  ["instant", "I will eat the instant eye."],
-  // nose
-  ["program", "I will program the nose."],
-  // ear
-  ["polish", "I will polish the ear."],
-  // tongue
-  ["profit", "How much profit did you make today?"],
-  // prophet
-  ["prophet", "The prophet told me that I will eat the prophet."],
-  // dinosaur
-  ["purchase", "I will purchase the dinosaur."],
+  ["poem", "She turned a poem into a song"],
+  ["duet", "I sang a duet with my daddy"],
+  ["idea", "I had an idea for a new instrument!"],
+  ["lion", "The lion's roar was my favorite song"],
+  ["usual", "As usual, I broke the guitar at the end of the song"],
+  ["credit", "I bought my piano with a credit card"],
+  ["science", "My science book taught me how guitar strings make sound"],
+  ["violin", "The violin was my favorite instrument"],
+  ["quiet", "The quiet parts between the notes are just as important as the notes themselves"],
+  ["react", "I react to the music with my eyes"],
+  ["period", "The period is the most important part of the song"],
+  ["fuel", "Give me fuel, give me fire, give me that which I desire. Ew."],
+  ["realize", "I realized that I had a lot of ideas for the song"],
+  ["trio", "I sang a trio with my dad and mom"],
+  ["piano", "I played the piano for a while"],
+  ["area", "Can you find the area of a drum head?"],
+  ["purchase", "I purchased my guitar and piano with lizards"],
+  ["kingdom", "The kingdom was famous for its music"],
+  ["language", "I learned a new language while I was learning bass"],
+  ["vacuum", "I learned how to play the vacuum cleaner"],
 ];
 let words = [];
 
