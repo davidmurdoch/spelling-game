@@ -38,28 +38,28 @@ const quips = [
 ];
 
 
-// my favorite star wars character is 
+// let's talk about learning
 const _words = [
-  ["poem", "She turned a poem into a song"],
-  ["duet", "I sang a duet with my daddy"],
-  ["idea", "I had an idea for a new instrument!"],
-  ["lion", "The lion's roar was my favorite song"],
-  ["usual", "As usual, I broke the guitar at the end of the song"],
-  ["credit", "I bought my piano with a credit card"],
-  ["science", "My science book taught me how guitar strings make sound"],
-  ["violin", "The violin was my favorite instrument"],
-  ["quiet", "The quiet parts between the notes are just as important as the notes themselves"],
-  ["react", "I react to the music with my eyes"],
-  ["period", "The period is the most important part of the song"],
-  ["fuel", "Give me fuel, give me fire, give me that which I desire. Ew."],
-  ["realize", "I realized that I had a lot of ideas for the song"],
-  ["trio", "I sang a trio with my dad and mom"],
-  ["piano", "I played the piano for a while"],
-  ["area", "Can you find the area of a drum head?"],
-  ["purchase", "I purchased my guitar and piano with lizards"],
-  ["kingdom", "The kingdom was famous for its music"],
-  ["language", "I learned a new language while I was learning bass"],
-  ["vacuum", "I learned how to play the vacuum cleaner"],
+  ["movement", "Mesmerized by its movement, she watched as it disappeared into the clouds."],
+  ["wonderful", "Wonderful, I'm so happy!"],
+  ["cloudless", "The sky was cloudless, and the stars were shining."],
+  ["powerful", "The silly, the strange, and the goofballs are powerful."],
+  ["skillful", "She was skillful in her craft."],
+  ["equipment", "The equipment was in the room, and it was pretty loud in there."],
+  ["useful", "The useful thing was pretty useful at being used."],
+  ["careless", "He was being careless when he smashed the window."],
+  ["payment", "I hope that take payment via PayPal."],
+  ["thoughtful", "He was thoughtful about his decision."],
+  ["agreement", "I agree with you, so we are in agreement."],
+  ["peaceful", "It was peaceful, and the children were playing."],
+  ["harmless", "She said it was harmless, but it bit her."],
+  ["colorful", "The colorful sky was beautiful."],
+  ["respectful", "He was respectful of his elders."],
+  ["treatments", "I'm going to get some treatments."],
+  ["create", "I'm going to create a new website."],
+  ["idea", "I have an idea for a candy that tastes like a banana."],
+  ["judgment", "Save your judgment for later."],
+  ["fulfill", "I'm going to fulfill my dream of becoming a software engineer. OK."],
 ];
 let words = [];
 
