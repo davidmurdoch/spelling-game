@@ -1,4 +1,35 @@
-let numWords = localStorage.getItem("numWords") == undefined ? 20 : localStorage.getItem("numWords");
+const _words = [
+  ["attach", "I will attach my head to your neck."],
+  ["camera", "The camera is helpful."],
+  ["canvas", "I will paint on the canvas."],
+  ["expand", "The foam will expand to fill the void around the window."],
+  ["fragment", "A small fragment of asbestos is dangerous."],
+  ["pattern", "The pattern is complete!"],
+  ["relax", "We finally got to relax when the room was finished."],
+  ["convince", "I will convince you to clean your room."],
+  ["deliver", "I will deliver the package to your house."],
+  ["exist", "It will exist in the future."],
+  ["insect", "The insect is crawling on the wall."],
+  ["spinach", "Do not put spinach in the blender."],
+  ["cleanse", "I will cleanse my body with a shower."],
+  ["event", "The event is tomorrow."],
+  ["method", "The drywall leveling method took a long time."],
+  ["shepherd", "The shepherd is watching the flock of seahorses."],
+  ["success", "The remodel was a success!"],
+  ["beyond", "The house is beyond repair."],
+  ["adopt", "I will not adopt a dog, because I don't want it to destroy the house."],
+  ["modern", "The house is modern."],
+  ["proverb", "The proverb is true."],
+  ["volume", "The volume is too loud."],
+  ["publish", "I will publish my book about drywall."],
+  ["custom", "I want to build a custom house."],
+  ["result", "The result is a beautiful house."],
+];
+
+  document
+  .getElementById("numWords").max = _words.length;
+
+let numWords = localStorage.getItem("numWords") == undefined ? _words.length : localStorage.getItem("numWords");
 let chatty = localStorage.getItem("talkative") === "false" ? false : true;
 let difficultyLevel = localStorage.getItem("difficultyLevel") == undefined ? 0 : localStorage.getItem("difficultyLevel");
 
@@ -38,29 +69,6 @@ const quips = [
 ];
 
 
-// let's talk about learning
-const _words = [
-  ["bravely", "I bravely fought the giant spider"],
-  ["weakness", "My weakness is in my heart"],
-  ["dirty", "I am dirty"],
-  ["closely", "I am closely related to the earth"],
-  ["blindness", "Her blindness kept her away"],
-  ["noisy", "You are so noisy"],
-  ["fitness", "the fitness club is my favorite"],
-  ["friendly", "They are not friendly to me at all"],
-  ["worthy", "I am worthy of you"],
-  ["finally", "Finally I will finally get out of this"],
-  ["guilty", "Amber is guilty of being mean"],
-  ["forgiveness", "Forgiveness is a virtue"],
-  ["willingly", "I willingly give up my responsibilities to you and your family if you will kindly do the same"],
-  ["breezy", "It is breezy today"],
-  ["surely", "Surely goodness and mercy will be with you"],
-  ["suddenly", "Suddenly, she sprang up and ran away"],
-  ["wonderful", "It was a wonderful day for her and her friends to go to the park and play with the dogs who were there to eat them"],
-  ["equipment", "I am not very good with my equipment that I have to wear all the time"],
-  ["gently", "He gently touched the dragon's head before he put it in the water"],
-  ["truly", "I am truly sorry for the poor children who are in need of help"],
-];
 let words = [];
 
 let word;
@@ -161,7 +169,7 @@ document
   .addEventListener("change", () => {
     const d = parseInt(document.getElementById("numWords").value);
     numWords = isNaN(d) ? numWords : d;
-    numWords = Math.min(numWords, 20);
+    numWords = Math.min(numWords, _words.length);
     numWords = Math.max(numWords, 0);
     document.getElementById("numWords").value = numWords;
     localStorage.setItem("numWords", numWords);
