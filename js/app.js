@@ -19,11 +19,11 @@ const _words = [
   ["degree", "It is at least 30 degrees outside."],
   ["deceive", "I will deceive you."],
   ["nectarine", "The nectarine is a fruit."],
-  ["beneath",   "The ball is beneath the table."],
+  ["beneath", "The ball is beneath the table."],
   ["explain", "I will explain the problem."],
   ["desire", "I desire the ice cream."],
   ["reduce", "I will reduce the volume."],
-  ["rotate",  "I will rotate the wheel."],
+  ["rotate", "I will rotate the wheel."],
   ["define", "I will define the word."],
 ];
 
