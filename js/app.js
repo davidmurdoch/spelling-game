@@ -66,7 +66,15 @@ const quips = [
   "How do we know that the ocean is friendly? It waves.",
   "Why did the toddler toss the butter out the window? So she could see a butter-fly.",
   "Why couldn't the pony sing a lullaby? She was a little horse.",
-  "What candy do bumblebees love the most? Bumble gum!"
+  "What candy do bumblebees love the most? Bumble gum!",
+  "What’s the difference between a hippo and a Zippo? One is really heavy, and the other is a little lighter.",
+  "What do you call a cow with no legs? Ground beef.",
+  "What do you call a cow with two legs? Lean beef.",
+  "What do you call a cow with three legs? Tri-tip.",
+  "What do you call a fake noodle? An impasta.",
+  "Knock, knock. Who’s there? A broken pencil. A broken pencil who? Never mind, it’s pointless.",
+  "What did the bunny say to the carrot? It’s been nice gnawing you.",
+  "What did the waffle say to the floor? Nothing, it just gave him a pancake. Hahahahahaha I'm so funny!",
 ];
 
 
