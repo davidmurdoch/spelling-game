@@ -5,7 +5,7 @@ const _words = [
   ["perform", "She will perform her dance"],
   ["parrot", "I want a parrot. Gwawk"],
   ["beware", "Beware of the gummy snakes."],
-  // ["", ""],
+  ["cargo", "The airplane carried cargo to Hawaii"],
   // ["", ""],
   // ["", ""],
   // ["", ""],
