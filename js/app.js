@@ -3,7 +3,7 @@ const _words = [
   ["forward", "I stepped forward."],
   ["errand", "My mommy went on an errand"],
   ["clarinet", "My mother does not know what a clarinet is."],
-  // ["garment", "The garment is purple."],
+  ["garment", "The garment is purple."],
   // ["aware", "Be aware of the dangers of the dragon."],
   // new words:
   ["menu", "The dinosaur ate the menu."],
@@ -18,7 +18,10 @@ const _words = [
   ["comment", "The compy put a comment card in the box."],
   ["planet", "The planet is shaped like a dinosaur"],
   ["contain", "We could not contain the plague of pterodactyls."],
-  // ["", ""],
+  ["umpire", "The umpire yelled at the dinosaur."],
+  ["digit", "My favorite digit is 10."],
+  ["cello", "I will play the cello for you."],
+  ["canyon", "The dinosaur walked through the canyon."],
 ];
 
   document
