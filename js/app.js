@@ -1,27 +1,19 @@
 // 25 words and sentences using that word:
 const _words = [
-  ["forward", "I stepped forward."],
-  ["errand", "My mommy went on an errand"],
-  ["clarinet", "My mother does not know what a clarinet is."],
-  ["garment", "The garment is purple."],
-  // ["aware", "Be aware of the dangers of the dragon."],
-  // new words:
-  ["menu", "The dinosaur ate the menu."],
-  ["offer", "I will offer you my shoe"],
   ["talent", "The dinosaur has an amazing talent"],
   ["gospel", "The dinosaur spread the gospel to all the world."],
-  ["body", "The dinosaur has a strange looking body."],
-  ["distant", "You could see a dinosaur on the top of a distant mountain."],
-  ["effort", "It took a lot of effort to catch the Tyrannosaurus Rex."],
-  ["compass", "The dinosaur sat on the compass"],
-  ["afford", "The dinosaur could not afford the new car."],
-  ["comment", "The compy put a comment card in the box."],
-  ["planet", "The planet is shaped like a dinosaur"],
-  ["contain", "We could not contain the plague of pterodactyls."],
-  ["umpire", "The umpire yelled at the dinosaur."],
-  ["digit", "My favorite digit is 10."],
-  ["cello", "I will play the cello for you."],
-  ["canyon", "The dinosaur walked through the canyon."],
+  // ["effort", "It took a lot of effort to catch the Tyrannosaurus Rex."],
+  // ["attempt", "The dinosaur attempted to eat the penguin."],
+  // ["refuge", "The penguin found refuge in the tree."],
+  // new words
+  ["solo", "I'm on a roll. It's time to go solo."],
+  ["camel", "The camel had 14352345 humps."],
+  ["eager", "I'm eager to get to the next level."],
+  ["humid", "It's so humid I could swim in the air."],
+  ["solid", "Non-newtonian fluid is a solid and a liquid."],
+  ["season", "Hurricane season is an important time of year."],
+  ["habit", "I have a bad habit of chewing my pencils."],
+  ["beaver", "De you think beaver tastes like chicken?"],
 ];
 
   document
