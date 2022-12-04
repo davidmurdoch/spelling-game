@@ -1,19 +1,31 @@
 // 25 words and sentences using that word:
 const _words = [
-  ["talent", "The dinosaur has an amazing talent"],
-  ["gospel", "The dinosaur spread the gospel to all the world."],
-  // ["effort", "It took a lot of effort to catch the Tyrannosaurus Rex."],
-  // ["attempt", "The dinosaur attempted to eat the penguin."],
-  // ["refuge", "The penguin found refuge in the tree."],
-  // new words
-  ["solo", "I'm on a roll. It's time to go solo."],
-  ["camel", "The camel had 14352345 humps."],
   ["eager", "I'm eager to get to the next level."],
-  ["humid", "It's so humid I could swim in the air."],
-  ["solid", "Non-newtonian fluid is a solid and a liquid."],
-  ["season", "Hurricane season is an important time of year."],
-  ["habit", "I have a bad habit of chewing my pencils."],
-  ["beaver", "De you think beaver tastes like chicken?"],
+  ["topic", "The topic of the day is the weather."],
+  ["protein", "Protein is an important part of a healthy diet."],
+  ["legal", "That's not legal!"],
+  ["pupil", "The pupil is the part of the eye that sees."],
+  // new words:
+  ["partner", "'I wonder what the middle of a rubik's cube looks like', said my partner."],
+  ["explore", "I will explore the inside of the rubik's cube."],
+  ["fabric", "The fabric of the rubik's cube is made of plastic."],
+  ["welcome", "Welcome to the rubik's cube museum."],
+  ["orchard", "The orchard is full of apples and rubik's cube trees."],
+  ["arctic", "The arctic is cold and full of rubik's cubes."],
+  ["comfort", "Rubik's cubes are most comfortable in the arctic."],
+  ["sculptor", "The sculptor made a rubik's cube out of ice."],
+  ["pastor", "The pastor is a rubik's cube."],
+  ["necklace", "The necklace is made of rubik's cubes."],
+  ["target", "The target is a rubik's cube."],
+  ["although", "Although the rubik's cube is a target, it is still a necklace."],
+  ["constant", "Planck's constant is a number that can be used to calculate the speed of light, rubik's cube."],
+  ["seldom", "Rubik's cubes are seldom solved by bears."],
+  ["mushroom", "A mushroom is growing out of an old rubik's cube."],
+  ["admire", "That racoon really admires her rubik's cube."],
+  ["fortress", "The fortress is made of rubik's cubes."],
+  ["ostrich", "The ostrich is eating a rubik's cube."],
+  ["portrait", "A portrait of my dad with a rubik's cube."],
+  ["textiles", "The textiles have a rubik's cube pattern."],
 ];
 
   document
@@ -64,6 +76,7 @@ const quips = [
   "Knock, knock. Who’s there? A broken pencil. A broken pencil who? Never mind, it’s pointless.",
   "What did the bunny say to the carrot? It’s been nice gnawing you.",
   "What did the waffle say to the floor? Nothing, it just gave him a pancake. Hahahahahaha I'm so funny!",
+  "Why did the scarecrow win an award? Because he was outstanding in his field.",
 ];
 
 
