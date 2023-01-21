@@ -1,31 +1,25 @@
 // 25 words and sentences using that word:
 const _words = [
-  ["although", "Although the rubik's cube is a target, it is still a necklace."],
-  ["seldom", "Rubik's cubes are seldom solved by bears."],
-  ["pastor", "The pastor is a rubik's cube."],
-  ["partner", "'I wonder what the middle of a rubik's cube looks like', said my partner."],
-  ["constant", "Planck's constant is a number that can be used to calculate the speed of light, rubik's cube."],
-  // new words:
-  ["completing", "I am completing the rubik's cube now."],
-  ["carried", "The rubik's cube was carried by the bear."],
-  ["risen", "The rubik's cube has risen from the ashes."],
-  ["excelled", "The bear excelled at solving the rubik's cube."],
-  ["families", "The families of the rubik's cube are very important."],
-  ["compared", "The rubik's cube is compared to the bear."],
-  ["forgetting", "The bear is forgetting the rubik's cube."],
+  // old words:
   ["abilities", "The bear has many abilities, including solving the rubik's cube."],
-  ["including", "The bear is including the rubik's cube in his diet."],
-  ["icier", "The rubik's cube is icier than the bear."],
   ["losing", "The bear is losing the rubik's cube."],
-  ["replied", "The bear replied to the rubik's cube."],
-  ["occupied", "The gorilla is occupied with the rubik's cube."],
-  ["omitted", "The bear omitted the rubik's cube from his diet."],
-  ["confused", "The daddy is confused why there is no picture for this word."],
-  ["earliest", "The earliest known rubik's cube was found in a cave."],
   ["permitting", "The bear is permitting the rubik's cube to fly."],
-  ["scanned", "The monkey scanned the jungle for his next banana buffet"],
-  ["cities", "The cities of the rubik's cube are very important."],
-  ["donating", "The bear is donating the rubik's cube to the museum."],
+  // ["earliest", "The earliest known rubik's cube was found in a cave."],
+  // ["compared", "The rubik's cube is compared to the bear."],
+  // new words
+  ["lifeguard", "The lifeguard saved the bear from drowning."],
+  ["themselves", "The mimes were so good at pretending to be trapped in a box, they even locked themselves in by accident."],
+  ["however", "I tried to catch some fog earlier, however I mist."],
+  ["warm-blooded", "As a warm-blooded being, I am blessed with the gift of self-regulation and the ability to adapt to my surroundings."],
+  ["everlasting", "I thought this meeting would be everlasting, but it looks like it's finally coming to an end."],
+  ["masterpiece", "I heard the local zoo is unveiling a new exhibit of hippos, but from what I've seen it's just a bunch of overweight pigs. I wouldn't call it a masterpiece."],
+  ["wheelchair", "I told my friend I wanted to try out his new electric wheelchair, but it turns out it was just a regular old manual one with a fan attached to it."],
+  ["hands-on", "I heard the moon was hands-on, but it turns out it's just a big rock that's always distant and aloof."],
+  ["steadfast", "I thought the bear was steadfast, but it turns out he's just a big doodoo."],
+  ["therefore", "Therefore, I am a big doodoo."],
+  ["self-control", "I thought I had self-control, but it turns out I'm just a big doodoo."],
+  
+  
 ];
 
   document
