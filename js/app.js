@@ -1,25 +1,15 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  ["abilities", "The bear has many abilities, including solving the rubik's cube."],
-  ["losing", "The bear is losing the rubik's cube."],
-  ["permitting", "The bear is permitting the rubik's cube to fly."],
-  // ["earliest", "The earliest known rubik's cube was found in a cave."],
-  // ["compared", "The rubik's cube is compared to the bear."],
-  // new words
-  ["lifeguard", "The lifeguard saved the bear from drowning."],
-  ["themselves", "The mimes were so good at pretending to be trapped in a box, they even locked themselves in by accident."],
-  ["however", "I tried to catch some fog earlier, however I mist."],
-  ["warm-blooded", "As a warm-blooded being, I am blessed with the gift of self-regulation and the ability to adapt to my surroundings."],
-  ["everlasting", "I thought this meeting would be everlasting, but it looks like it's finally coming to an end."],
-  ["masterpiece", "I heard the local zoo is unveiling a new exhibit of hippos, but from what I've seen it's just a bunch of overweight pigs. I wouldn't call it a masterpiece."],
-  ["wheelchair", "I told my friend I wanted to try out his new electric wheelchair, but it turns out it was just a regular old manual one with a fan attached to it."],
-  ["hands-on", "I heard the moon was hands-on, but it turns out it's just a big rock that's always distant and aloof."],
-  ["steadfast", "I thought the bear was steadfast, but it turns out he's just a big doodoo."],
-  ["therefore", "Therefore, I am a big doodoo."],
   ["self-control", "I thought I had self-control, but it turns out I'm just a big doodoo."],
-  
-  
+  // ["trustworthy","I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
+  // ["therefore", "Therefore, I am a big doodoo."],
+  // ["out-of-bounds", "I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
+  // ["masterpiece", "I heard the local zoo is unveiling a new exhibit of hippos, but from what I've seen it's just a bunch of overweight pigs. I wouldn't call it a masterpiece."],
+  // new words
+  ["peer", "She tried to peer over her shoulder."],
+  ["coarse", "The coarse sandpaper was too rough for my skin."],
+  ["muscle", "The muscle in my leg is sore."]
 ];
 
   document
