@@ -1,15 +1,24 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  ["self-control", "I thought I had self-control, but it turns out I'm just a big doodoo."],
-  // ["trustworthy","I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
+  //["self-control", "I thought I had self-control, but it turns out I'm just a big doodoo."],
+  //["trustworthy","I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
   // ["therefore", "Therefore, I am a big doodoo."],
   // ["out-of-bounds", "I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
   // ["masterpiece", "I heard the local zoo is unveiling a new exhibit of hippos, but from what I've seen it's just a bunch of overweight pigs. I wouldn't call it a masterpiece."],
   // new words
   ["peer", "She tried to peer over her shoulder."],
   ["coarse", "The coarse sandpaper was too rough for my skin."],
-  ["muscle", "The muscle in my leg is sore."]
+  ["muscle", "The muscle in my leg is sore."],
+  ["presents", "I gave my friend some presents for her birthday."],
+  ["morning", "I woke up this morning and had a cup of coffee."],
+  ["very", "That is a very tall shoe."],
+  ["mussel", "I ate a mussel for lunch."],
+  ["presence", "I felt the presence of my friend in the room."],
+  ["pier", "I went to the pier to watch the sunset."],
+  ["mourning", "I was in mourning after my dog died."],
+  ["course", "I hit a golf ball onto the course."],
+  ["vary", "I vary my diet to stay healthy."]
 ];
 
   document
@@ -74,6 +83,9 @@ const lettersDiv = document.getElementById("letters");
 const speakButton = document.getElementById("speakButton");
 const inputDiv = document.getElementById("input");
 const form = document.getElementById("form");
+const ding = new Audio("./img/ding-idea-40142.mp3");
+const wrong = new Audio("./img/buzzer-or-wrong-answer-20582.mp3");
+wrong.volume = .5;
 let pauseForm = false;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -83,8 +95,8 @@ form.addEventListener("submit", (e) => {
   if (!w) return;
   if (w === word[0].toLowerCase()) {
     pauseForm = true;
-    const utterance = new SpeechSynthesisUtterance("Correct!");
-    speechSynthesis.speak(utterance);
+    
+    ding.play();
     setTimeout(() => {
       document.getElementById("sprite").style.left =
         100 * (lastWord / words.length) + "%";
@@ -96,8 +108,7 @@ form.addEventListener("submit", (e) => {
       }, 1000);
     });
   } else {
-    const utterance = new SpeechSynthesisUtterance("Incorrect");
-    speechSynthesis.speak(utterance);
+    wrong.play();
     pauseForm = true;
     setTimeout(() => {
       pauseForm = false;
