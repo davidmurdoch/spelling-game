@@ -18,7 +18,15 @@ const _words = [
   ["pier", "I went to the pier to watch the sunset."],
   ["mourning", "I was in mourning after my dog died."],
   ["course", "I hit a golf ball onto the course."],
-  ["vary", "I vary my diet to stay healthy."]
+  ["vary", "I vary my diet to stay healthy."],
+  ["idle", "I had to idle in traffic for an hour."],
+  ["hanger", "I hung my clothes on the hanger."],
+  ["dessert", "I had a dessert for breakfast."],
+  ["alter", "Can you alter this dress for me?"],
+  ["hangar", "The airplane is in the hangar."],
+  ["idol", "Do not worship idols."],
+  ["altar", "The priest stood at the altar."],
+  ["desert", "I went to the desert to see the sand dunes."]
 ];
 
   document
