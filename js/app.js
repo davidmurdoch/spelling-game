@@ -1,32 +1,30 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  //["self-control", "I thought I had self-control, but it turns out I'm just a big doodoo."],
-  //["trustworthy","I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
-  // ["therefore", "Therefore, I am a big doodoo."],
-  // ["out-of-bounds", "I wouldn't consider that gingerbread man trustworthy, he's always running out-of-bounds and acting backward."],
-  // ["masterpiece", "I heard the local zoo is unveiling a new exhibit of hippos, but from what I've seen it's just a bunch of overweight pigs. I wouldn't call it a masterpiece."],
-  // new words
-  ["peer", "She tried to peer over her shoulder."],
-  ["coarse", "The coarse sandpaper was too rough for my skin."],
   ["muscle", "The muscle in my leg is sore."],
-  ["presents", "I gave my friend some presents for her birthday."],
-  ["morning", "I woke up this morning and had a cup of coffee."],
-  ["very", "That is a very tall shoe."],
-  ["mussel", "I ate a mussel for lunch."],
   ["presence", "I felt the presence of my friend in the room."],
-  ["pier", "I went to the pier to watch the sunset."],
-  ["mourning", "I was in mourning after my dog died."],
   ["course", "I hit a golf ball onto the course."],
   ["vary", "I vary my diet to stay healthy."],
-  ["idle", "I had to idle in traffic for an hour."],
-  ["hanger", "I hung my clothes on the hanger."],
   ["dessert", "I had a dessert for breakfast."],
-  ["alter", "Can you alter this dress for me?"],
-  ["hangar", "The airplane is in the hangar."],
-  ["idol", "Do not worship idols."],
-  ["altar", "The priest stood at the altar."],
-  ["desert", "I went to the desert to see the sand dunes."]
+  // new words
+  ["prevents", "The vaccine prevents the spread of the virus."],
+  ["forecast", "The weather forecast says it will rain tomorrow."],
+  ["prepaid", "I prepaid my phone bill."],
+  ["remind", "Please remind me to call my mom."],
+  ["mistake", "I made a mistake."],
+  ["recharge", "I need to recharge my phone."],
+  ["forehead", "I have a headache on my forehead."],
+
+  ["refinish", "We will refinish the table."],
+  ["forethought", "I had forethought about the consequences of my actions."],
+  ["remodel", "We will remodel the kitchen."],
+  ["mistreat", "I might mistreat my friend by stepping on them."],
+
+  ["restored", "The car was restored to its original condition."],
+  ["foreshadow", "The movie foreshadowed the ending."],
+  ["reschedule", "I need to reschedule my appointment."],
+  ["precaution", "I took precautions to avoid getting sick."],
+  ["rearrange", "I rearranged the furniture in my room."]
 ];
 
   document
