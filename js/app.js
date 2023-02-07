@@ -25,7 +25,7 @@ const _words = [
   ["reschedule", "I need to reschedule my appointment."],
   ["precaution", "I took precautions to avoid getting sick."],
   ["rearrange", "I rearranged the furniture in my room."],
-  
+
   ["forewarn", "I forewarned my friend about the consequences of their actions."],
   ["resource", "I used a resource to help me with my homework."],
   ["misleading", "The misleading information caused me to make a mistake."],
