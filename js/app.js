@@ -1,35 +1,23 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  ["muscle", "The muscle in my leg is sore."],
-  ["presence", "I felt the presence of my friend in the room."],
-  ["course", "I hit a golf ball onto the course."],
-  ["vary", "I vary my diet to stay healthy."],
-  ["dessert", "I had a dessert for breakfast."],
+  // ["nonfiction", "I like reading a nonfiction books."],
+  // ["dissolve", "I will dissolve the sugar in the water."],
+  // ["unnecessary", "That is unnecessary."],
+  // ["disability", "I have a disability."],
+  // ["uncertain", "I am uncertain about the future."],
   // new words
-  ["prevents", "The vaccine prevents the spread of the virus."],
-  ["forecast", "The weather forecast says it will rain tomorrow."],
-  ["prepaid", "I prepaid my phone bill."],
-  ["remind", "Please remind me to call my mom."],
-  ["mistake", "I made a mistake."],
-  ["recharge", "I need to recharge my phone."],
-  ["forehead", "I have a headache on my forehead."],
+  ["example", "You should always set a good example."],
+  ["incomplete", "The puzzle is incomplete."],
+  ["enable", "I need to enable the feature."],
+  ["exact", "The exact time is 3:00."],
+  ["enforced", "The rules are enforced."],
+  ["infield", "The infield is where the players play."],
 
-  ["refinish", "We will refinish the table."],
-  ["forethought", "I had forethought about the consequences of my actions."],
-  ["remodel", "We will remodel the kitchen."],
-  ["mistreat", "I might mistreat my friend by stepping on them."],
-
-  ["restored", "The car was restored to its original condition."],
-  ["foreshadow", "The movie foreshadowed the ending."],
-  ["reschedule", "I need to reschedule my appointment."],
-  ["precaution", "I took precautions to avoid getting sick."],
-  ["rearrange", "I rearranged the furniture in my room."],
-
-  ["forewarn", "I forewarned my friend about the consequences of their actions."],
-  ["resource", "I used a resource to help me with my homework."],
-  ["misleading", "The misleading information caused me to make a mistake."],
-  ["reassemble", "I reassembled the furniture."]
+  ["incorrect", "That is incorrect."],
+  ["expects", "I expect to win."],
+  ["installing", "I am installing the software."],
+  ["exchange", "I will exchange the item."],
 ];
 
   document
