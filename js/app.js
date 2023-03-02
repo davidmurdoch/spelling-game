@@ -1,23 +1,35 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  // ["nonfiction", "I like reading a nonfiction books."],
-  // ["dissolve", "I will dissolve the sugar in the water."],
-  // ["unnecessary", "That is unnecessary."],
-  // ["disability", "I have a disability."],
-  // ["uncertain", "I am uncertain about the future."],
-  // new words
   ["example", "You should always set a good example."],
-  ["incomplete", "The puzzle is incomplete."],
   ["enable", "I need to enable the feature."],
   ["exact", "The exact time is 3:00."],
   ["enforced", "The rules are enforced."],
-  ["infield", "The infield is where the players play."],
+  ["intruding", "I hope i'm not intruding on your privacy."],
+  // new words
+  // ["fluid", "The fluid is leaking."],
+  // ["patio", "I like to sit on the patio."],
+  // ["meter", "The meter is broken."],
+  // ["casual", "I like to dress casually."],
+  
+  // ["patriot", "I am a patriot."],
+  // ["diet", "I am on a diet."],
+  ["trial", "I am on trial."],
+  // ["pioneer", "I am a pioneer."],
 
-  ["incorrect", "That is incorrect."],
-  ["expects", "I expect to win."],
-  ["installing", "I am installing the software."],
-  ["exchange", "I will exchange the item."],
+  // ["poet", "I am a poet."],
+  // ["diagram", "I need to draw a diagram."],
+  // ["giant", "I am a giant cephalopod."],
+  // ["museum", "I like to visit the museum of whales."],
+  // ["viola", "I play the viola."],
+
+  // ["ruin", "If you drop a glass, it will ruin the carpet."],
+  // ["variety", "I like to eat a variety of foods."],
+  // ["pliers", "I need to use pliers to fix the faucet."],
+  // ["cereal", "I like to eat cereal for breakfast."],
+
+  // ["anxiety", "I have anxiety."],
+  ["annual", "I have an annual physical."],
 ];
 
   document
