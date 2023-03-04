@@ -1,35 +1,17 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  ["example", "You should always set a good example."],
-  ["enable", "I need to enable the feature."],
-  ["exact", "The exact time is 3:00."],
-  ["enforced", "The rules are enforced."],
-  ["intruding", "I hope i'm not intruding on your privacy."],
+  //["old","The old man the boat."]
   // new words
-  // ["fluid", "The fluid is leaking."],
-  // ["patio", "I like to sit on the patio."],
-  // ["meter", "The meter is broken."],
-  // ["casual", "I like to dress casually."],
-  
-  // ["patriot", "I am a patriot."],
-  // ["diet", "I am on a diet."],
-  ["trial", "I am on trial."],
-  // ["pioneer", "I am a pioneer."],
+  ["statement", "The statement was false."],
+  ["meekness", "Meekness is a virtue."],
+  ["bubbly", "The bubbly drink was refreshing."],
+  ["wireless", "The wireless mouse was easy to use."],
+  ["measurement", "The measurement was accurate."],
 
-  // ["poet", "I am a poet."],
-  // ["diagram", "I need to draw a diagram."],
-  // ["giant", "I am a giant cephalopod."],
-  // ["museum", "I like to visit the museum of whales."],
-  // ["viola", "I play the viola."],
-
-  // ["ruin", "If you drop a glass, it will ruin the carpet."],
-  // ["variety", "I like to eat a variety of foods."],
-  // ["pliers", "I need to use pliers to fix the faucet."],
-  // ["cereal", "I like to eat cereal for breakfast."],
-
-  // ["anxiety", "I have anxiety."],
-  ["annual", "I have an annual physical."],
+  ["stormy", "The stormy weather was scary."],
+  ["firmness", "The firmness of the ground was surprising."],
+  ["priceless", "The priceless painting was beautiful."],
 ];
 
   document
