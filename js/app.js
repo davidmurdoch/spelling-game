@@ -1,17 +1,17 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  //["old","The old man the boat."]
+  // ["wireless", "The wireless mouse was easy to use."],
+  // ["measurement", "The measurement was accurate."],
+  // ["godliness", "The godliness of the priest was inspiring."],
+  // ["honesty", "The honesty of the person was admirable."],
+  // ["announcement", "The announcement was surprising."],
   // new words
-  ["statement", "The statement was false."],
-  ["meekness", "Meekness is a virtue."],
-  ["bubbly", "The bubbly drink was refreshing."],
-  ["wireless", "The wireless mouse was easy to use."],
-  ["measurement", "The measurement was accurate."],
-
-  ["stormy", "The stormy weather was scary."],
-  ["firmness", "The firmness of the ground was surprising."],
-  ["priceless", "The priceless painting was beautiful."],
+  ["manner", "He had a pleasant manner."],
+  ["favor", "The favor was unexpected."],
+  ["molars", "The molars were sharp."],
+  ["mayor", "The mayor was a good leader."],
+  ["polar", "The polar bear was white."],
 ];
 
   document
