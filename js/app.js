@@ -12,6 +12,12 @@ const _words = [
   ["molars", "The molars were sharp."],
   ["mayor", "The mayor was a good leader."],
   ["polar", "The polar bear was white."],
+
+  ["carpenter", "The carpenter was a good worker."],
+  ["collar", "The collar was tight."],
+  ["minister", "The minister was a good speaker."],
+  ["lunar", "The lunar eclipse was beautiful."],
+  ["surrender", "The surrender was unexpected."],
 ];
 
   document
