@@ -6,18 +6,34 @@ const _words = [
   // ["godliness", "The godliness of the priest was inspiring."],
   // ["honesty", "The honesty of the person was admirable."],
   // ["announcement", "The announcement was surprising."],
-  // new words
-  ["manner", "He had a pleasant manner."],
-  ["favor", "The favor was unexpected."],
-  ["molars", "The molars were sharp."],
-  ["mayor", "The mayor was a good leader."],
-  ["polar", "The polar bear was white."],
+  // ["manner", "He had a pleasant manner."],
+  // ["favor", "The favor was unexpected."],
+  // ["molars", "The molars were sharp."],
+  // ["mayor", "The mayor was a good leader."],
+  // ["polar", "The polar bear was white."],
 
-  ["carpenter", "The carpenter was a good worker."],
-  ["collar", "The collar was tight."],
-  ["minister", "The minister was a good speaker."],
-  ["lunar", "The lunar eclipse was beautiful."],
-  ["surrender", "The surrender was unexpected."],
+  // ["carpenter", "The carpenter was a good worker."],
+  // ["collar", "The collar was tight."],
+  // ["minister", "The minister was a good speaker."],
+  // ["lunar", "The lunar eclipse was beautiful."],
+  // ["surrender", "The surrender was unexpected."],
+
+  // ["center", "The center of the city was busy."],
+  // ["remembered", "He remembered the day."],
+  // ["cedar", "The cedar tree was tall."],
+  // ["monitor", "The monitor lizard ate a house."],
+  // ["grammar", "The grammar was correct."],
+
+  // ["consider", "You should consider the consequences."],
+  // ["scholar", "The scholar was a good student."],
+  // ["cylinder", "The cylinder was round."],
+
+  // ["splendor", "The splendor of the palace was amazing."],
+  // ["tutor", "The tutor was a good teacher."]
+  // new words
+  ["normal","It is normal to be nervous."],
+  ["fossils", "The fossils were old."],
+  ["people", "The people were friendly."],
 ];
 
   document
