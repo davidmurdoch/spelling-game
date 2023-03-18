@@ -34,6 +34,11 @@ const _words = [
   ["normal","It is normal to be nervous."],
   ["fossils", "The fossils were old."],
   ["people", "The people were friendly."],
+
+  ["pretzel", "The pretzel was salty."],
+  ["sandal", "The sandal was comfortable."],
+  ["fragile", "The fragile vase was beautiful."],
+  ["eternal", "The eternal flame was beautiful."],
 ];
 
   document
