@@ -39,6 +39,22 @@ const _words = [
   ["sandal", "The sandal was comfortable."],
   ["fragile", "The fragile vase was beautiful."],
   ["eternal", "The eternal flame was beautiful."],
+
+  ["vessel", "The vessel was beautiful."],
+  ["central", "The central park was beautiful."],
+  ["noble", "The noble person was kind."],
+  ["spiral", "The spiral staircase was beautiful."],
+  ["trouble", "I apologized after getting into trouble."],
+
+  ["lentil", "The lentil was a good source of protein."],
+  ["kennel", "The kennel was a good place for the dog."],
+  ["mental", "The mental health of the person was good."],
+  ["articles", "The articles were interesting."],
+
+  ["shrivel", "It will shrivel if it is left out in the sun."],
+  ["sterile", "The sterile gloves were used to prevent infection."],
+  ["mammals", "Mammals are warm-blooded."],
+  ["vehicle", "The vehicle was fast."],
 ];
 
   document
