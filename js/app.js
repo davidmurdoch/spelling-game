@@ -1,60 +1,51 @@
 // 25 words and sentences using that word:
 const _words = [
   // old words:
-  // ["wireless", "The wireless mouse was easy to use."],
-  // ["measurement", "The measurement was accurate."],
-  // ["godliness", "The godliness of the priest was inspiring."],
-  // ["honesty", "The honesty of the person was admirable."],
-  // ["announcement", "The announcement was surprising."],
-  // ["manner", "He had a pleasant manner."],
-  // ["favor", "The favor was unexpected."],
-  // ["molars", "The molars were sharp."],
-  // ["mayor", "The mayor was a good leader."],
-  // ["polar", "The polar bear was white."],
+  // ["normal","It is normal to be nervous."],
+  // ["fossils", "The fossils were old."],
+  // ["people", "The people were friendly."],
 
-  // ["carpenter", "The carpenter was a good worker."],
-  // ["collar", "The collar was tight."],
-  // ["minister", "The minister was a good speaker."],
-  // ["lunar", "The lunar eclipse was beautiful."],
-  // ["surrender", "The surrender was unexpected."],
+  // ["pretzel", "The pretzel was salty."],
+  // ["sandal", "The sandal was comfortable."],
+  // ["fragile", "The fragile vase was beautiful."],
+  // ["eternal", "The eternal flame was beautiful."],
 
-  // ["center", "The center of the city was busy."],
-  // ["remembered", "He remembered the day."],
-  // ["cedar", "The cedar tree was tall."],
-  // ["monitor", "The monitor lizard ate a house."],
-  // ["grammar", "The grammar was correct."],
+  // ["vessel", "The vessel was beautiful."],
+  // ["central", "The central park was beautiful."],
+  // ["noble", "The noble person was kind."],
+  // ["spiral", "The spiral staircase was beautiful."],
+  // ["trouble", "I apologized after getting into trouble."],
 
-  // ["consider", "You should consider the consequences."],
-  // ["scholar", "The scholar was a good student."],
-  // ["cylinder", "The cylinder was round."],
+  // ["lentil", "The lentil was a good source of protein."],
+  // ["kennel", "The kennel was a good place for the dog."],
+  // ["mental", "The mental health of the person was good."],
+  // ["articles", "The articles were interesting."],
 
-  // ["splendor", "The splendor of the palace was amazing."],
-  // ["tutor", "The tutor was a good teacher."]
+  // ["shrivel", "It will shrivel if it is left out in the sun."],
+  // ["sterile", "The sterile gloves were used to prevent infection."],
+  // ["mammals", "Mammals are warm-blooded."],
+  // ["vehicle", "The vehicle was fast."],
   // new words
-  ["normal","It is normal to be nervous."],
-  ["fossils", "The fossils were old."],
-  ["people", "The people were friendly."],
+  ["pollen", "The pollen made by eyes itch"],
+  ["margin", "The margin was the edge of the paper."],
+  ["organ", "The organ was the heart."],
+  ["doctrine", "The doctrine was the belief."],
+  ["citizen", "The citizen was the person."],
 
-  ["pretzel", "The pretzel was salty."],
-  ["sandal", "The sandal was comfortable."],
-  ["fragile", "The fragile vase was beautiful."],
-  ["eternal", "The eternal flame was beautiful."],
+  ["engine", "The engine was the car."],
+  ["straighten", "The straighten was the line."],
+  ["discipline", "The discipline was the punishment."],
+  ["linen", "The linen was the cloth."],
+  ["beacon", "The beacon was the light."],
 
-  ["vessel", "The vessel was beautiful."],
-  ["central", "The central park was beautiful."],
-  ["noble", "The noble person was kind."],
-  ["spiral", "The spiral staircase was beautiful."],
-  ["trouble", "I apologized after getting into trouble."],
+  ["salmon", "The salmon was the fish."],
+  ["strengthen", "The strengthen was the muscle."],
+  ["slogan", "The slogan was the phrase."],
+  ["examine", "The examine was the test."],
+  ["weapon", "The weapon was the gun."],
 
-  ["lentil", "The lentil was a good source of protein."],
-  ["kennel", "The kennel was a good place for the dog."],
-  ["mental", "The mental health of the person was good."],
-  ["articles", "The articles were interesting."],
-
-  ["shrivel", "It will shrivel if it is left out in the sun."],
-  ["sterile", "The sterile gloves were used to prevent infection."],
-  ["mammals", "Mammals are warm-blooded."],
-  ["vehicle", "The vehicle was fast."],
+  ["determine", "The determine was the decision."],
+  ["chieftain", "The chieftain was the leader."],
 ];
 
   document
@@ -248,6 +239,12 @@ const startOver = (e) => {
 document.getElementById("start-over").addEventListener("click", startOver);
 document.getElementById("start-over-link").addEventListener("click", startOver);
 
+const image = document.getElementById("photo");
+image.addEventListener("load", () => {
+  const colorThief = new ColorThief();
+  const dominantColor = colorThief.getColor(image);
+  document.body.style.background = "rgb(" + dominantColor.join(",") + ")";
+});
 
 function start() {
   word = words[lastWord];
