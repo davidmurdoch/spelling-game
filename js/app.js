@@ -46,6 +46,10 @@ const _words = [
 
   ["determine", "The determine was the decision."],
   ["chieftain", "The chieftain was the leader."],
+
+  ["satin", "The satin was the cloth."],
+  ["genuine", "The genuine was the real."],
+  ["oxygen", "The oxygen was the gas."],
 ];
 
   document
