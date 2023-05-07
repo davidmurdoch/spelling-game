@@ -1,73 +1,37 @@
 // 25 words and sentences using that word:
 const _words = [
-  // old words:
-  // ["normal","It is normal to be nervous."],
-  // ["fossils", "The fossils were old."],
-  // ["people", "The people were friendly."],
-
-  // ["pretzel", "The pretzel was salty."],
-  // ["sandal", "The sandal was comfortable."],
-  // ["fragile", "The fragile vase was beautiful."],
-  // ["eternal", "The eternal flame was beautiful."],
-
-  // ["vessel", "The vessel was beautiful."],
-  // ["central", "The central park was beautiful."],
-  // ["noble", "The noble person was kind."],
-  // ["spiral", "The spiral staircase was beautiful."],
-  // ["trouble", "I apologized after getting into trouble."],
-
-  // ["lentil", "The lentil was a good source of protein."],
-  // ["kennel", "The kennel was a good place for the dog."],
-  // ["mental", "The mental health of the person was good."],
-  // ["articles", "The articles were interesting."],
-
-  // ["shrivel", "It will shrivel if it is left out in the sun."],
-  // ["sterile", "The sterile gloves were used to prevent infection."],
-  // ["mammals", "Mammals are warm-blooded."],
-  // ["vehicle", "The vehicle was fast."],
-  // new words
-  ["pollen", "The pollen made by eyes itch"],
-  ["margin", "The margin was the edge of the paper."],
-  ["organ", "The organ was the heart."],
-  ["doctrine", "The doctrine was the belief."],
-  ["citizen", "The citizen was the person."],
-
-  ["engine", "The engine was the car."],
-  ["straighten", "The straighten was the line."],
-  ["discipline", "The discipline was the punishment."],
-  ["linen", "The linen was the cloth."],
-  ["beacon", "The beacon was the light."],
-
-  ["salmon", "The salmon was the fish."],
-  ["strengthen", "The strengthen was the muscle."],
-  ["slogan", "The slogan was the phrase."],
-  ["examine", "The examine was the test."],
-  ["weapon", "The weapon was the gun."],
-
-  ["determine", "The determine was the decision."],
-  ["chieftain", "The chieftain was the leader."],
-
-  ["satin", "The satin was the cloth."],
-  ["genuine", "The genuine was the real."],
-  ["oxygen", "The oxygen was the gas."],
+  ["service", "The service at this restaurant is excellent."],
+  ["olive", "I love to eat olives."],
+  ["surface", "The surface of the table is smooth."],
+  ["motive", "What is your motive for doing this?"],
+  ["active", "I am active in my church."],
+  ["justice", "Justice is important."],
+  ["creative", "I am a creative person."],
 ];
 
-  document
-  .getElementById("numWords").max = _words.length;
+document.getElementById("numWords").max = _words.length;
 
-let numWords = localStorage.getItem("numWords") == undefined ? _words.length : localStorage.getItem("numWords");
+let numWords =
+  localStorage.getItem("numWords") == undefined
+    ? _words.length
+    : localStorage.getItem("numWords");
 let chatty = localStorage.getItem("talkative") === "false" ? false : true;
-let difficultyLevel = localStorage.getItem("difficultyLevel") == undefined ? 0 : localStorage.getItem("difficultyLevel");
+let difficultyLevel =
+  localStorage.getItem("difficultyLevel") == undefined
+    ? 0
+    : localStorage.getItem("difficultyLevel");
 
-let bgColor = localStorage.getItem("bgColor") === undefined ? "green" : localStorage.getItem("bgColor");
+let bgColor =
+  localStorage.getItem("bgColor") === undefined
+    ? "green"
+    : localStorage.getItem("bgColor");
 
 document.getElementById("numWords").value = numWords;
 document.getElementById("difficultyLevelInput").value = difficultyLevel;
 document.getElementById("talkativeInput").checked = chatty;
 document.getElementById("bgColor").value = bgColor;
 
-
-function setBgColor(color){
+function setBgColor(color) {
   document.getElementById("start").style.backgroundColor = color;
   document.body.style.backgroundColor = color;
 }
@@ -103,12 +67,10 @@ const quips = [
   "Why did the scarecrow win an award? Because he was outstanding in his field.",
 ];
 
-
 let words = [];
 
 let word;
 let lastWord = 0;
-
 
 const lettersDiv = document.getElementById("letters");
 const speakButton = document.getElementById("speakButton");
@@ -116,7 +78,7 @@ const inputDiv = document.getElementById("input");
 const form = document.getElementById("form");
 const ding = new Audio("./img/ding-idea-40142.mp3");
 const wrong = new Audio("./img/buzzer-or-wrong-answer-20582.mp3");
-wrong.volume = .5;
+wrong.volume = 0.5;
 let pauseForm = false;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -126,7 +88,7 @@ form.addEventListener("submit", (e) => {
   if (!w) return;
   if (w === word[0].toLowerCase()) {
     pauseForm = true;
-    
+
     ding.play();
     setTimeout(() => {
       document.getElementById("sprite").style.left =
@@ -193,26 +155,22 @@ document
     draw(word);
   });
 
-  document
-  .getElementById("bgColor")
-  .addEventListener("change", () => {
-    bgColor = document.getElementById("bgColor").value
-    setBgColor(bgColor);
-    localStorage.setItem("bgColor", bgColor);
-  });
+document.getElementById("bgColor").addEventListener("change", () => {
+  bgColor = document.getElementById("bgColor").value;
+  setBgColor(bgColor);
+  localStorage.setItem("bgColor", bgColor);
+});
 
-  document
-  .getElementById("numWords")
-  .addEventListener("change", () => {
-    const d = parseInt(document.getElementById("numWords").value);
-    numWords = isNaN(d) ? numWords : d;
-    numWords = Math.min(numWords, _words.length);
-    numWords = Math.max(numWords, 0);
-    document.getElementById("numWords").value = numWords;
-    localStorage.setItem("numWords", numWords);
+document.getElementById("numWords").addEventListener("change", () => {
+  const d = parseInt(document.getElementById("numWords").value);
+  numWords = isNaN(d) ? numWords : d;
+  numWords = Math.min(numWords, _words.length);
+  numWords = Math.max(numWords, 0);
+  document.getElementById("numWords").value = numWords;
+  localStorage.setItem("numWords", numWords);
 
-    startOver();
-  });
+  startOver();
+});
 
 function begin() {
   lastWord = 0;
@@ -222,7 +180,7 @@ function begin() {
   tempWords = tempWords.sort(() => {
     return Math.random() < 0.5 ? -1 : 1;
   });
-  let repeatTimes = (_words.length / Math.floor(numWords));
+  let repeatTimes = _words.length / Math.floor(numWords);
   tempWords = tempWords.slice(0, numWords);
   words = [];
   for (let i = 0; i < repeatTimes; i++) {
@@ -230,7 +188,7 @@ function begin() {
       words.push(tempWords[j]);
     }
   }
-  
+
   start();
 }
 
@@ -239,7 +197,7 @@ const startOver = (e) => {
   begin();
   document.getElementById("won").style.display = "none";
   document.getElementById("app").style.display = "block";
-}
+};
 document.getElementById("start-over").addEventListener("click", startOver);
 document.getElementById("start-over-link").addEventListener("click", startOver);
 
@@ -323,4 +281,3 @@ document.getElementById("start").addEventListener("click", () => {
   document.getElementById("start").style.display = "none";
   begin();
 });
-
