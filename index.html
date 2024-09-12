@@ -1,712 +1,756 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vocabulary Quiz</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-      }
-      .header {
-        align-items: baseline;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-      }
-      .counter {
-        font-size: 18px;
-      }
-      .quiz {
-        display: flex;
-        justify-content: center;
-      }
-      .quiz-inner {
-        display: flex;
-      }
-      .word-bank {
-        background-color: #f9f9f9;
-        width: 200px;
-        border: 1px solid #ddd;
-        padding: 0;
-        margin: 10px 10px 30px 0;
-        align-self: flex-start;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-      }
-      #word-list {
-        padding: 0 1.2em;
-      }
-      .word-bank h4 {
-        margin: 0;
-        padding: .5em;
-        border-bottom:solid 1px black;
-        background:white;
-        text-align: center;
-      }
-      .word-bank li {
-        list-style: upper-alpha;
-        padding: 5px 0;
-        cursor: pointer;
-      }
-      .word-bank li.used {
-        text-decoration: line-through;
-        color: #bbb;
-      }
-      .definitions {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        flex-shrink: 1;
-      }
-      .definition {
-        display: flex;
-        margin-bottom: 10px;
-      }
-      .definition span {
-        margin-right: 10px;
-        width: 20px;
-      }
-      .definition input {
-        width: 30px;
-        text-align: center;
-        margin-right: 10px;
-      }
-      .definitions.show-hints .definition.wrong {
-        color: red;
-      }
-      .buttons {
-        display: block;
-        text-align: center;
-      }
-      button {
-        padding: 10px 20px;
-        margin: 5px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <form action="#" onsubmit="return false">
-      <div class="header">
-        <div class="counter">
-          Words Correct: <span id="quiz-counter">0</span>
-        </div>
-        <div class="buttons">
-          <button id="check-btn" disabled type="submit">Check</button>
-          <button id="show-btn">Show Incorrect</button>
-          <button id="shuffle-btn">Shuffle</button>
-        </div>
-        <div class="counter"></div>
-          Streak:
-          <span id="score-counter">0%</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocabulary Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1A472A; /* Slytherin green */
+      color: #C0C0C0; /* Silver text */
+    }
+
+    .header {
+      align-items: baseline;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #2D3E34; /* Darker green for header */
+      border-bottom: 2px solid #5D5D5D; /* Silver border */
+    }
+
+    .counter {
+      font-size: 18px;
+      color: #C0C0C0; /* Silver text */
+    }
+
+    .buttons button {
+      background-color: #5D5D5D; /* Silver */
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 4px;
+    }
+
+    .buttons button:hover {
+      background-color: #8E8E8E; /* Lighter silver on hover */
+    }
+
+    .quiz {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .quiz-inner {
+      display: flex;
+    }
+
+    .word-bank {
+      background-color: #2D3E34; /* Dark green background */
+      color: #C0C0C0; /* Silver text */
+      width: 200px;
+      border: 1px solid #5D5D5D; /* Silver border */
+      padding: 0;
+      margin: 10px 10px 30px 0;
+      align-self: flex-start;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #word-list {
+      padding: 0 1.2em;
+      margin: 0.5em 1em;
+    }
+
+    .word-bank h4 {
+      margin: 0;
+      padding: 0.5em;
+      border-bottom: solid 1px #5D5D5D; /* Silver border */
+      background: #1A472A; /* Slytherin green */
+      color: #C0C0C0; /* Silver text */
+      text-align: center;
+    }
+
+    .word-bank li {
+      list-style: upper-alpha;
+      padding: 5px 0;
+      cursor: pointer;
+      color: #C0C0C0; /* Silver text */
+    }
+
+    .word-bank li.used {
+      text-decoration: line-through;
+      color: #8E8E8E; /* Faded silver */
+    }
+
+    .definitions {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      flex-shrink: 1;
+    }
+
+    .definition {
+      display: flex;
+      margin-bottom: 10px;
+      color: #C0C0C0; /* Silver text */
+    }
+
+    .definition span {
+      margin-right: 10px;
+      width: 20px;
+      color: #FFFFFF; /* White letters */
+    }
+
+    .definition input {
+      width: 30px;
+      text-align: center;
+      margin-right: 10px;
+      background-color: #5D5D5D; /* Silver input box */
+      color: #FFFFFF; /* White text */
+      border: 1px solid #8E8E8E; /* Lighter silver border */
+    }
+
+    .definitions.show-hints .definition.wrong {
+      color: red;
+    }
+
+    hr {
+      border-color: #5D5D5D; /* Silver horizontal line */
+    }
+
+    .all-words-stats {
+      color: #C0C0C0; /* Silver text */
+    }
+  </style>
+</head>
+<body>
+  <form action="#" onsubmit="return false">
+    <div class="header">
+      <div class="counter">
+        Words Correct: <span id="quiz-counter">0</span>
+      </div>
+      <div class="buttons">
+        <button id="check-btn" disabled type="submit">Check</button>
+        <button id="show-btn">Show Incorrect</button>
+        <button id="shuffle-btn">Shuffle</button>
+      </div>
+      <div class="counter"></div>
+        Streak:
+        <span id="score-counter">0%</span>
+      </div>
+    </div>
+
+    <div class="quiz">
+      <div class="quiz-inner">
+        <div class="definitions" id="definitions"></div>
+        <div class="word-bank">
+          <h4>Word Bank</h4>
+          <ul id="word-list"></ul>
         </div>
       </div>
+    </div>
+  </form>
 
-      <div class="quiz">
-        <div class="quiz-inner">
-          <div class="definitions" id="definitions"></div>
-          <div class="word-bank">
-            <h4>Word Bank</h4>
-            <ul id="word-list"></ul>
-          </div>
-        </div>
-      </div>
-    </form>
+  <hr />
+  <div class="all-words-stats"></div>
 
-    <hr />
-    <div class="all-words-stats"></div>
+  <script>
+    /**
+     * @typedef WordPair
+     * @type {Object}
+     * @property {string} word - The word
+     * @property {string} definition - The definition of the word
+     */
 
-    <script>
-      /**
-       * @typedef WordPair
-       * @type {Object}
-       * @property {string} word - The word
-       * @property {string} definition - The definition of the word
-       */
+    /**
+     * @typedef WordList
+     * @type {WordPair[]}
+     */
 
-      /**
-       * @typedef WordList
-       * @type {WordPair[]}
-       */
+    /**
+     * @typedef QuizResult
+     * @type {Object}
+     * @property {string} word - The word
+     * @property {boolean} correct - Whether the answer was correct
+     */
 
-      /**
-       * @typedef QuizResult
-       * @type {Object}
-       * @property {string} word - The word
-       * @property {boolean} correct - Whether the answer was correct
-       */
+    /**
+     * @typedef QuizResults
+     * @type {QuizResult[]}
+     */
 
-      /**
-       * @typedef QuizResults
-       * @type {QuizResult[]}
-       */
+    /**
+     * @typedef {Object} Stat
+     * @property {number} correctCount - Number of correct answers
+     * @property {Object<string, boolean>} answers - Object where the key is the quiz number (0-based index)
+     * @property {number} incorrectCount - Number of incorrect answers
+     * @property {number} shownCount - Number of times the word was shown
+     * @property {number} quizzesAgo - Number of quizzes ago the word was last shown
+     */
 
-      /**
-       * @typedef {Object} Stat
-       * @property {number} correctCount - Number of correct answers
-       * @property {Object<string, boolean>} answers - Object where the key is the quiz number (0-based index)
-       * @property {number} incorrectCount - Number of incorrect answers
-       * @property {number} shownCount - Number of times the word was shown
-       * @property {number} quizzesAgo - Number of quizzes ago the word was last shown
-       */
+    /**
+     * @typedef {Object.<string, Stat>} Stats
+     */
 
-      /**
-       * @typedef {Object.<string, Stat>} Stats
-       */
+    const WORDS = [
+      {
+        word: 'Barrage',
+        definition:
+          'rapid outpouring',
+      },
+      {
+        word: 'Demolish',
+        definition: 'to destroy',
+      },
+      {
+        word: 'Dispel',
+        definition:
+          'drive away',
+      },
+      {
+        word: 'Feint',
+        definition:
+          'to make a feint or sham attack',
+      },
+      {
+        word: 'Improvise',
+        definition:
+          'to speak with little preparation',
+      },
+      {
+        word: 'Pensively',
+        definition: 'thoughtfully',
+      },
+      { word: 'Abate', definition: 'to decrease' },
+      {
+        word: 'Brooding',
+        definition: 'pondering',
+      },
+      {
+        word: 'Dire',
+        definition:
+          'dreadful',
+      },
+      {
+        word: 'Gait',
+        definition: 'movement',
+      },
+      {
+        word: 'Intermittently',
+        definition:
+          'periodically',
+      },
+      {
+        word: 'Myriad',
+        definition: 'large number',
+      },
+      { word: 'Onslaught', definition: 'attack' },
+      {
+        word: 'Plunder',
+        definition:
+          'to rob',
+      },
+      {
+        word: 'Reluctant',
+        definition: 'unwilling',
+      },
+      {
+        word: 'Extricate',
+        definition:
+          'to get out of a trap',
+      },
+      { word: 'Malicious', definition: 'hateful.' },
+      {
+        word: 'Presumptuous',
+        definition:
+          'excessively bold in making assumptions',
+      },
+      {
+        word: 'Rash',
+        definition: 'acting without thinking things through',
+      },
+      {
+        word: 'Grimy',
+        definition: 'dirty',
+      },
+      {
+        word: 'Perilously',
+        definition: 'dangerously',
+      },
+      {
+        word: 'Disdainful',
+        definition: 'disapproving or looking down on something or someone',
+      },
+      {
+        word: 'Fawn',
+        definition:
+          'to show affection by tail wagging, groveling, etc.',
+      },
+      {
+        word: 'Austere',
+        definition: 'severely simple',
+      },
+      {
+        word: 'Chronic',
+        definition: 'continuous or constant',
+      },
+      {
+        word: 'Blighted',
+        definition:
+          'blasted, ruined',
+      },
+      { word: 'Imminent', definition: 'about to happen' },
+      {
+        word: 'Infallibility',
+        definition:
+          'incapable of error',
+      },
+      {
+        word: 'Precariously',
+        definition:
+          'in a dangerously unstable way',
+      },
+      {
+        word: 'Vortex',
+        definition:
+          'whirlpool',
+      },
+    ];
 
-      const WORDS = [
-        {
-          word: 'Barrage',
-          definition:
-            'rapid outpouring',
-        },
-        {
-          word: 'Demolish',
-          definition: 'to destroy',
-        },
-        {
-          word: 'Dispel',
-          definition:
-            'drive away',
-        },
-        {
-          word: 'Feint',
-          definition:
-            'to make a feint or sham attack',
-        },
-        {
-          word: 'Improvise',
-          definition:
-            'to speak with little preparation',
-        },
-        {
-          word: 'Pensively',
-          definition: 'thoughtfully',
-        },
-        { word: 'Abate', definition: 'to decrease' },
-        {
-          word: 'Brooding',
-          definition: 'pondering',
-        },
-        {
-          word: 'Dire',
-          definition:
-            'dreadful',
-        },
-        {
-          word: 'Gait',
-          definition: 'movement',
-        },
-        {
-          word: 'Intermittently',
-          definition:
-            'periodically',
-        },
-        {
-          word: 'Myriad',
-          definition: 'large number',
-        },
-        { word: 'Onslaught', definition: 'attack' },
-        {
-          word: 'Plunder',
-          definition:
-            'to rob',
-        },
-        {
-          word: 'Reluctant',
-          definition: 'unwilling',
-        },
-        {
-          word: 'Extricate',
-          definition:
-            'to get out of a trap',
-        },
-        { word: 'Malicious', definition: 'hateful.' },
-        {
-          word: 'Presumptuous',
-          definition:
-            'excessively bold in making assumptions',
-        },
-        {
-          word: 'Rash',
-          definition: 'acting without thinking things through',
-        },
-        {
-          word: 'Grimy',
-          definition: 'dirty',
-        },
-        {
-          word: 'Perilously',
-          definition: 'dangerously',
-        },
-        {
-          word: 'Disdainful',
-          definition: 'disapproving or looking down on something or someone',
-        },
-        {
-          word: 'Fawn',
-          definition:
-            'to show affection by tail wagging, groveling, etc.',
-        },
-        {
-          word: 'Austere',
-          definition: 'severely simple',
-        },
-        {
-          word: 'Chronic',
-          definition: 'continuous or constant',
-        },
-        {
-          word: 'Blighted',
-          definition:
-            'blasted, ruined',
-        },
-        { word: 'Imminent', definition: 'about to happen' },
-        {
-          word: 'Infallibility',
-          definition:
-            'incapable of error',
-        },
-        {
-          word: 'Precariously',
-          definition:
-            'in a dangerously unstable way',
-        },
-        {
-          word: 'Vortex',
-          definition:
-            'whirlpool',
-        },
-      ];
+    const COUNTER = new Set();
 
-      const COUNTER = new Set();
+    const wordListDiv = document.getElementById('word-list');
+    const definitionsDiv = document.getElementById('definitions');
+    const quizCounter = document.getElementById('quiz-counter');
+    const checkBtn = document.getElementById('check-btn');
+    const showBtn = document.getElementById('show-btn');
+    const scoreCounter = document.getElementById('score-counter');
+    const allWordsStats = document.querySelector('.all-words-stats');
 
-      const wordListDiv = document.getElementById('word-list');
-      const definitionsDiv = document.getElementById('definitions');
-      const quizCounter = document.getElementById('quiz-counter');
-      const checkBtn = document.getElementById('check-btn');
-      const showBtn = document.getElementById('show-btn');
-      const scoreCounter = document.getElementById('score-counter');
-      const allWordsStats = document.querySelector('.all-words-stats');
+    quizCounter.textContent = `0/${WORDS.length}`;
 
-      quizCounter.textContent = `0/${WORDS.length}`;
+    function updateAllWordsStats() {
+      allWordsStats.innerHTML = '';
+      const allWords = Object.keys(STATS);
+      allWords.forEach((word) => {
+        const wordStats = STATS[word];
+        const wordDiv = document.createElement('div');
+        wordDiv.textContent = `${word}: ${wordStats.correctCount}/${wordStats.shownCount}`;
+        allWordsStats.appendChild(wordDiv);
+      });
+    }
 
-      function updateAllWordsStats() {
-        allWordsStats.innerHTML = '';
-        const allWords = Object.keys(STATS);
-        allWords.forEach((word) => {
-          const wordStats = STATS[word];
-          const wordDiv = document.createElement('div');
-          wordDiv.textContent = `${word}: ${wordStats.correctCount}/${wordStats.shownCount}`;
-          allWordsStats.appendChild(wordDiv);
-        });
-      }
+    const quizSymbol = Symbol('quiz');
+    /**
+     * Update the statistics based on the quiz results
+     * @param {WordList} wordList - List of words
+     * @param {QuizResults} quizResults - Results of the quiz
+     * @param {Stats} stats - Statistics for each word
+     * @returns {void}
+     */
+    function updateStatistics(wordList, quizResults, stats = {}) {
+      stats[quizSymbol] |= 0;
+      const currentQuiz = stats[quizSymbol];
 
-      const quizSymbol = Symbol('quiz');
-      /**
-       * Update the statistics based on the quiz results
-       * @param {WordList} wordList - List of words
-       * @param {QuizResults} quizResults - Results of the quiz
-       * @param {Stats} stats - Statistics for each word
-       * @returns {void}
-       */
-      function updateStatistics(wordList, quizResults, stats = {}) {
-        stats[quizSymbol] |= 0;
-        const currentQuiz = stats[quizSymbol];
+      stats[quizSymbol]++;
+      // Initialize stats for new words in the word list
+      wordList.forEach((wordPair) => {
+        const word = wordPair.word;
+        if (!stats[word]) {
+          stats[word] = {
+            answers: {},
+            correctCount: 0,
+            incorrectCount: 0,
+            shownCount: 0,
+            quizzesAgo: 0,
+          };
+        }
+        // Increment the quizzesAgo for all words
+        stats[word].quizzesAgo++;
+      });
 
-        stats[quizSymbol]++;
-        // Initialize stats for new words in the word list
-        wordList.forEach((wordPair) => {
-          const word = wordPair.word;
-          if (!stats[word]) {
-            stats[word] = {
-              answers: {},
-              correctCount: 0,
-              incorrectCount: 0,
-              shownCount: 0,
-              quizzesAgo: 0,
-            };
+      // Update stats based on the quiz results
+      quizResults.forEach((result) => {
+        const word = result.word;
+        if (stats[word]) {
+          stats[word].shownCount++;
+          stats[word].answers[currentQuiz] = result.correct;
+          if (result.correct) {
+            stats[word].correctCount++;
+          } else {
+            stats[word].incorrectCount++;
           }
-          // Increment the quizzesAgo for all words
-          stats[word].quizzesAgo++;
-        });
+          // Reset the quizzesAgo since the word was just shown
+          stats[word].quizzesAgo = 0;
+        }
+      });
 
-        // Update stats based on the quiz results
-        quizResults.forEach((result) => {
-          const word = result.word;
-          if (stats[word]) {
-            stats[word].shownCount++;
-            stats[word].answers[currentQuiz] = result.correct;
-            if (result.correct) {
-              stats[word].correctCount++;
-            } else {
-              stats[word].incorrectCount++;
-            }
-            // Reset the quizzesAgo since the word was just shown
-            stats[word].quizzesAgo = 0;
-          }
-        });
+      const score = calculateRecentScoreFromStats(stats, wordList.length);
+      scoreCounter.textContent = score.toFixed(2) + '%';
+      updateAllWordsStats();
+    }
 
-        const score = calculateRecentScoreFromStats(stats, wordList.length);
-        scoreCounter.textContent = score.toFixed(2) + '%';
-        updateAllWordsStats();
+    /**
+     * Shuffle an array
+     * @param {any[]} array - The array to shuffle
+     * @returns {any[]} - The shuffled array
+     */
+    function randomizeArray(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    /**
+     * Shuffle and return a selection of words, biased by incorrect answers and time since last seen.
+     * @param {WordList} wordList - The full list of words with definitions.
+     * @param {Object} stats - The statistics object containing word performance.
+     * @param {number} numWordsToReturn - The number of words to return.
+     * @param {number} [maxQuizzesAgo=2] - The maximum number of quizzes ago that a word should be prioritized.
+     * @returns {{pair: WordPair, weight: number}[]} - A biased, shuffled selection of words.
+     */
+    function shuffleWords(
+      wordList,
+      stats,
+      numWordsToReturn,
+      maxQuizzesAgo = 3,
+    ) {
+      if (numWordsToReturn > 26) {
+        throw new Error('Cannot return more than 26 words');
       }
 
-      /**
-       * Shuffle an array
-       * @param {any[]} array - The array to shuffle
-       * @returns {any[]} - The shuffled array
-       */
-      function randomizeArray(array) {
-        return array.sort(() => Math.random() - 0.5);
+      if (numWordsToReturn > wordList.length) {
+        numWordsToReturn = wordList.length;
       }
 
-      /**
-       * Shuffle and return a selection of words, biased by incorrect answers and time since last seen.
-       * @param {WordList} wordList - The full list of words with definitions.
-       * @param {Object} stats - The statistics object containing word performance.
-       * @param {number} numWordsToReturn - The number of words to return.
-       * @param {number} [maxQuizzesAgo=2] - The maximum number of quizzes ago that a word should be prioritized.
-       * @returns {{pair: WordPair, weight: number}[]} - A biased, shuffled selection of words.
-       */
-      function shuffleWords(
-        wordList,
-        stats,
-        numWordsToReturn,
-        maxQuizzesAgo = 3,
+      // Create a weighted word list based on the stats
+      const weightedWords = wordList.map((wordPair) => {
+        const word = wordPair.word;
+        const wordStats = stats[word];
+        const totalAttempts =
+          wordStats.correctCount + wordStats.incorrectCount;
+
+        // Weight for words that haven't been shown yet
+        const notShownWeight = wordStats.shownCount === 0 ? 0.1 : 0;
+
+        // Base weight gives a small preference to words that haven't been shown recently,
+        // even if they were always answered correctly
+        const baseWeight = 0.25 + wordStats.quizzesAgo / (maxQuizzesAgo + 1);
+
+        // Weight for incorrect answers (scaled higher if incorrect more often), amplified by baseWeight
+        const incorrectWeight =
+          wordStats.incorrectCount / Math.max(1, totalAttempts) +
+          // amplify by baseWeight. This increases `incorrectWeight` slightly faster than baseWeight
+          (wordStats.incorrectCount / Math.max(1, totalAttempts)) *
+            baseWeight;
+
+        const randomWeight = Math.random() * 0.01;
+
+        const weight =
+          notShownWeight + incorrectWeight + baseWeight + randomWeight;
+
+        console.log(wordPair.word + ' ' + weight.toFixed(6));
+
+        return {
+          wordPair,
+          weight,
+        };
+      });
+
+      // Sort by weight, but normalize the randomness more evenly across the entire word list
+      const totalWeight = weightedWords.reduce((sum, w) => sum + w.weight, 0);
+      const normalizedWords = weightedWords
+        .map((w) => ({
+          ...w,
+          normalizedWeight: w.weight / totalWeight,
+        }))
+        .sort((a, b) => {
+          return b.normalizedWeight - a.normalizedWeight;
+        })
+        .slice(0, numWordsToReturn);
+
+      return randomizeArray(normalizedWords).map((a) => {
+        return {
+          pair: a.wordPair,
+          weight: a.normalizedWeight,
+        };
+      });
+    }
+
+    /**
+     * Show or hide the incorrect hints
+     */
+    function showHints() {
+      definitionsDiv.classList.toggle('show-hints');
+      showBtn.textContent = definitionsDiv.classList.contains('show-hints')
+        ? 'Hide Incorrect'
+        : 'Show Incorrect';
+    }
+    showBtn.addEventListener('click', showHints);
+
+    /**
+     * Calculate the percentage score based on the most recent wordPair.length quizzed words using the stats object.
+     * Returns -1 if not all words have been tried yet.
+     * Considers only consecutive correct answers across quizzes and adjusts the score based on correct quizzes.
+     * @param {Stats} stats - The statistics object containing word performance.
+     * @param {number} recentCount - The number of recent words to evaluate (wordPair.length).
+     * @returns {number} - The percentage score based on the most recent answers or -1 if not all words have been attempted.
+     */
+    function calculateRecentScoreFromStats(stats, recentCount) {
+      // Check if all words have been attempted at least once
+      const allWordsAttempted = Object.keys(stats).every((word) => {
+        const wordStats = stats[word];
+        return wordStats.answers && Object.keys(wordStats.answers).length > 0;
+      });
+
+      // Reconstruct the order of quizzes based on the quiz number in the answers object
+      const allQuizNumbers = Object.keys(stats).reduce((acc, word) => {
+        const wordStats = stats[word];
+        const quizNumbers = Object.keys(wordStats.answers).map(Number);
+        return acc.concat(quizNumbers);
+      }, []);
+
+      if (allQuizNumbers.length === 0) {
+        return 0;
+      }
+
+      // Sort quiz numbers in ascending order
+      const sortedQuizNumbers = [...new Set(allQuizNumbers)].sort(
+        (a, b) => a - b,
+      );
+
+      // Initialize counters for total quizzes and correct quizzes
+      let totalQuizzes = 0;
+      let correctQuizzes = 0;
+
+      // Loop through recent quizzes (up to recentCount)
+      for (
+        let i = sortedQuizNumbers.length - recentCount;
+        i < sortedQuizNumbers.length;
+        i++
       ) {
-        if (numWordsToReturn > 26) {
-          throw new Error('Cannot return more than 26 words');
-        }
-
-        if (numWordsToReturn > wordList.length) {
-          numWordsToReturn = wordList.length;
-        }
-
-        // Create a weighted word list based on the stats
-        const weightedWords = wordList.map((wordPair) => {
-          const word = wordPair.word;
-          const wordStats = stats[word];
-          const totalAttempts =
-            wordStats.correctCount + wordStats.incorrectCount;
-
-          // Weight for words that haven't been shown yet
-          const notShownWeight = wordStats.shownCount === 0 ? 0.1 : 0;
-
-          // Base weight gives a small preference to words that haven't been shown recently,
-          // even if they were always answered correctly
-          const baseWeight = 0.25 + wordStats.quizzesAgo / (maxQuizzesAgo + 1);
-
-          // Weight for incorrect answers (scaled higher if incorrect more often), amplified by baseWeight
-          const incorrectWeight =
-            wordStats.incorrectCount / Math.max(1, totalAttempts) +
-            // amplify by baseWeight. This increases `incorrectWeight` slightly faster than baseWeight
-            (wordStats.incorrectCount / Math.max(1, totalAttempts)) *
-              baseWeight;
-
-          const randomWeight = Math.random() * 0.01;
-
-          const weight =
-            notShownWeight + incorrectWeight + baseWeight + randomWeight;
-
-          console.log(wordPair.word + ' ' + weight.toFixed(6));
-
-          return {
-            wordPair,
-            weight,
-          };
-        });
-
-        // Sort by weight, but normalize the randomness more evenly across the entire word list
-        const totalWeight = weightedWords.reduce((sum, w) => sum + w.weight, 0);
-        const normalizedWords = weightedWords
-          .map((w) => ({
-            ...w,
-            normalizedWeight: w.weight / totalWeight,
-          }))
-          .sort((a, b) => {
-            return b.normalizedWeight - a.normalizedWeight;
-          })
-          .slice(0, numWordsToReturn);
-
-        return randomizeArray(normalizedWords).map((a) => {
-          return {
-            pair: a.wordPair,
-            weight: a.normalizedWeight,
-          };
-        });
-      }
-
-      /**
-       * Show or hide the incorrect hints
-       */
-      function showHints() {
-        definitionsDiv.classList.toggle('show-hints');
-        showBtn.textContent = definitionsDiv.classList.contains('show-hints')
-          ? 'Hide Incorrect'
-          : 'Show Incorrect';
-      }
-      showBtn.addEventListener('click', showHints);
-
-      /**
-       * Calculate the percentage score based on the most recent wordPair.length quizzed words using the stats object.
-       * Returns -1 if not all words have been tried yet.
-       * Considers only consecutive correct answers across quizzes and adjusts the score based on correct quizzes.
-       * @param {Stats} stats - The statistics object containing word performance.
-       * @param {number} recentCount - The number of recent words to evaluate (wordPair.length).
-       * @returns {number} - The percentage score based on the most recent answers or -1 if not all words have been attempted.
-       */
-      function calculateRecentScoreFromStats(stats, recentCount) {
-        // Check if all words have been attempted at least once
-        const allWordsAttempted = Object.keys(stats).every((word) => {
-          const wordStats = stats[word];
-          return wordStats.answers && Object.keys(wordStats.answers).length > 0;
-        });
-
-        // Reconstruct the order of quizzes based on the quiz number in the answers object
-        const allQuizNumbers = Object.keys(stats).reduce((acc, word) => {
-          const wordStats = stats[word];
-          const quizNumbers = Object.keys(wordStats.answers).map(Number);
-          return acc.concat(quizNumbers);
-        }, []);
-
-        if (allQuizNumbers.length === 0) {
-          return 0;
-        }
-
-        // Sort quiz numbers in ascending order
-        const sortedQuizNumbers = [...new Set(allQuizNumbers)].sort(
-          (a, b) => a - b,
+        const quizNumber = sortedQuizNumbers[i];
+        const quizWords = Object.keys(stats).filter(
+          (word) => quizNumber in stats[word].answers,
         );
 
-        // Initialize counters for total quizzes and correct quizzes
-        let totalQuizzes = 0;
-        let correctQuizzes = 0;
+        // Check correctness of each word in this quiz
+        const allCorrect = quizWords.every(
+          (word) => stats[word].answers[quizNumber],
+        );
 
-        // Loop through recent quizzes (up to recentCount)
-        for (
-          let i = sortedQuizNumbers.length - recentCount;
-          i < sortedQuizNumbers.length;
-          i++
-        ) {
-          const quizNumber = sortedQuizNumbers[i];
-          const quizWords = Object.keys(stats).filter(
-            (word) => quizNumber in stats[word].answers,
-          );
+        // Increment total quizzes count
+        totalQuizzes++;
 
-          // Check correctness of each word in this quiz
-          const allCorrect = quizWords.every(
-            (word) => stats[word].answers[quizNumber],
-          );
-
-          // Increment total quizzes count
-          totalQuizzes++;
-
-          // Increment correct quizzes count if all words in the quiz were correct
-          if (allCorrect) {
-            correctQuizzes++;
-          }
+        // Increment correct quizzes count if all words in the quiz were correct
+        if (allCorrect) {
+          correctQuizzes++;
         }
-
-        // Calculate and return the percentage score
-        return (correctQuizzes / totalQuizzes) * 100;
       }
 
-      /**
-       * Render the word bank
-       */
-      function renderWordBank() {
-        wordListDiv.innerHTML = '';
-        shuffledWords.forEach((item, index) => {
-          const li = document.createElement('li');
-          li.textContent = `${
-            item.pair.word
-          }`;
-          li.id = `word-${index}`;
-          wordListDiv.appendChild(li);
-        });
-      }
+      // Calculate and return the percentage score
+      return (correctQuizzes / totalQuizzes) * 100;
+    }
 
-      /**
-       * Get the statistics for a word
-       * @param {WordPair} wordPair - The word pair
-       * @returns {Stats} - The statistics for the word
-       */
-      function getStatsForWord(wordPair) {
-        return STATS[wordPair.word];
-      }
+    /**
+     * Render the word bank
+     */
+    function renderWordBank() {
+      wordListDiv.innerHTML = '';
+      shuffledWords.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = `${
+          item.pair.word
+        }`;
+        li.id = `word-${index}`;
+        wordListDiv.appendChild(li);
+      });
+    }
 
-      /**
-       * Render the definitions
-       */
-      function renderDefinitions() {
-        definitionsDiv.innerHTML = '';
-        // limit the characters allowed from a-shuffledWords.length
-        const pattern = `[A-${String.fromCharCode(
-          65 + shuffledWords.length - 1,
-        )}]`;
+    /**
+     * Get the statistics for a word
+     * @param {WordPair} wordPair - The word pair
+     * @returns {Stats} - The statistics for the word
+     */
+    function getStatsForWord(wordPair) {
+      return STATS[wordPair.word];
+    }
 
-        randomizeArray(
-          shuffledWords.map((item, index) => ({ item, index })),
-        ).forEach(({ item: weighted, index }, orderedIndex) => {
-          const { pair: item, weight } = weighted;
-          const definitionDiv = document.createElement('div');
-          definitionDiv.className = 'definition';
-          definitionDiv.innerHTML = `
-                    <span>${orderedIndex + 1}.</span>
-                    <input type="text" id="input-${index}" maxlength="1" pattern="${pattern}" />
-                    <p>${item.definition}</p>
-                `;
-          definitionsDiv.appendChild(definitionDiv);
-          // when the input is blurred, check if a valid letter is entered
-          // and if it is, cross that word off the list
-          const element = document.getElementById(`input-${index}`);
+    /**
+     * Render the definitions
+     */
+    function renderDefinitions() {
+      definitionsDiv.innerHTML = '';
+      // limit the characters allowed from a-shuffledWords.length
+      const pattern = `[A-${String.fromCharCode(
+        65 + shuffledWords.length - 1,
+      )}]`;
 
-          // when element is typed into make sure everything is uppercase!
-          element.addEventListener('input', (e) => {
-            e.target.value = e.target.value.toUpperCase();
+      randomizeArray(
+        shuffledWords.map((item, index) => ({ item, index })),
+      ).forEach(({ item: weighted, index }, orderedIndex) => {
+        const { pair: item, weight } = weighted;
+        const definitionDiv = document.createElement('div');
+        definitionDiv.className = 'definition';
+        definitionDiv.innerHTML = `
+                  <span>${orderedIndex + 1}.</span>
+                  <input type="text" id="input-${index}" maxlength="1" pattern="${pattern}" />
+                  <p>${item.definition}</p>
+              `;
+        definitionsDiv.appendChild(definitionDiv);
+        // when the input is blurred, check if a valid letter is entered
+        // and if it is, cross that word off the list
+        const element = document.getElementById(`input-${index}`);
 
-            markUsedWords();
-            checkBtn.disabled = !shuffledWords.every((item, index) => {
-              return document.getElementById(`input-${index}`).value;
-            });
-          });
-          element.addEventListener('blur', (e) => {
-            const input = e.target.value.toUpperCase();
-            const correctLetter = String.fromCharCode(65 + index);
-            if (!input || input === correctLetter) {
-              e.target.parentElement.classList.remove('wrong');
-            } else {
-              e.target.parentElement.classList.add('wrong');
-            }
+        // when element is typed into make sure everything is uppercase!
+        element.addEventListener('input', (e) => {
+          e.target.value = e.target.value.toUpperCase();
+
+          markUsedWords();
+          checkBtn.disabled = !shuffledWords.every((item, index) => {
+            return document.getElementById(`input-${index}`).value;
           });
         });
-      }
-
-      function markUsedWords() {
-        // reset
-        document.querySelectorAll('.definition input').forEach((input) => {
-          const index = input.id.split('-')[1];
+        element.addEventListener('blur', (e) => {
+          const input = e.target.value.toUpperCase();
           const correctLetter = String.fromCharCode(65 + index);
-          document.getElementById(`word-${index}`).classList.remove('used');
-        });
-
-        shuffledWords.forEach((item, index) => {
-          const input = document
-            .getElementById(`input-${index}`)
-            .value.toUpperCase()
-            .trim();
-          if (input) {
-            const elementIndex = input.charCodeAt(0) - 65;
-            const element = document.getElementById(`word-${elementIndex}`);
-            if (element) {
-              element.classList.add('used');
-            }
-          }
-        });
-      }
-
-      /**
-       * @type {{pair:WordPair, weight:number}[]}
-       */
-      let shuffledWords = [];
-
-      /**
-       * @type {Stats}
-       */
-      let STATS = {};
-
-      /**
-       * Check the answers
-       * @returns {QuizResults} - Whether all answers are correct
-       */
-      function getAnswers() {
-        /**
-         * @type {QuizResults}
-         */
-        const answers = [];
-        shuffledWords.forEach((item, index) => {
-          const input = document
-            .getElementById(`input-${index}`)
-            .value.toUpperCase();
-          const correctLetter = String.fromCharCode(65 + index);
-          const correct = input === correctLetter;
-          answers.push({
-            word: item.pair.word,
-            correct,
-          });
-        });
-        return answers;
-      }
-
-      /**
-       * Check the answers
-       * @param {QuizResults} answers - The answers
-       * @returns {boolean} - Whether all answers are correct
-       */
-      function checkAnswers(answers) {
-        let allCorrect = true;
-        answers.forEach((item, index) => {
-          const input = document
-            .getElementById(`input-${index}`)
-            .value.toUpperCase();
-          if (item.correct) {
-            document.getElementById(`word-${index}`).classList.add('used');
+          if (!input || input === correctLetter) {
+            e.target.parentElement.classList.remove('wrong');
           } else {
-            allCorrect = false;
+            e.target.parentElement.classList.add('wrong');
           }
         });
-        return allCorrect;
-      }
+      });
+    }
 
-      /**
-       * Reset the quiz
-       */
-      function resetQuiz() {
-        shuffledWords = shuffleWords(WORDS, STATS, 10);
-        renderWordBank();
-        renderDefinitions();
-        checkBtn.disabled = true;
-      }
+    function markUsedWords() {
+      // reset
+      document.querySelectorAll('.definition input').forEach((input) => {
+        const index = input.id.split('-')[1];
+        const correctLetter = String.fromCharCode(65 + index);
+        document.getElementById(`word-${index}`).classList.remove('used');
+      });
 
-      function initialize() {
-        updateStatistics(WORDS, [], STATS);
-        resetQuiz();
-      }
-
-      function check() {
-        const answers = getAnswers();
-        updateStatistics(WORDS, answers, STATS);
-        if (checkAnswers(answers)) {
-          alert('All answers are correct!');
-          shuffledWords.forEach((item) => COUNTER.add(item.pair.word));
-          quizCounter.textContent = `${COUNTER.size}/${WORDS.length}`;
-          resetQuiz();
-        } else {
-          alert('Some answers are incorrect. Try again!');
-        }
-      }
-      document.getElementById('check-btn').addEventListener('click', check);
-
-      function generateNewList() {
-        const answers = getAnswers();
-        if (!checkAnswers(answers)) {
-          if (
-            !confirm(
-              'You have not answered all questions correctly.\n\nAre you sure you want to shuffle the quiz?',
-            )
-          ) {
-            return;
+      shuffledWords.forEach((item, index) => {
+        const input = document
+          .getElementById(`input-${index}`)
+          .value.toUpperCase()
+          .trim();
+        if (input) {
+          const elementIndex = input.charCodeAt(0) - 65;
+          const element = document.getElementById(`word-${elementIndex}`);
+          if (element) {
+            element.classList.add('used');
           }
         }
-        resetQuiz();
-      }
-      document
-        .getElementById('shuffle-btn')
-        .addEventListener('click', generateNewList);
+      });
+    }
 
-      initialize(WORDS);
-    </script>
-  </body>
+    /**
+     * @type {{pair:WordPair, weight:number}[]}
+     */
+    let shuffledWords = [];
+
+    /**
+     * @type {Stats}
+     */
+    let STATS = {};
+
+    /**
+     * Check the answers
+     * @returns {QuizResults} - Whether all answers are correct
+     */
+    function getAnswers() {
+      /**
+       * @type {QuizResults}
+       */
+      const answers = [];
+      shuffledWords.forEach((item, index) => {
+        const input = document
+          .getElementById(`input-${index}`)
+          .value.toUpperCase();
+        const correctLetter = String.fromCharCode(65 + index);
+        const correct = input === correctLetter;
+        answers.push({
+          word: item.pair.word,
+          correct,
+        });
+      });
+      return answers;
+    }
+
+    /**
+     * Check the answers
+     * @param {QuizResults} answers - The answers
+     * @returns {boolean} - Whether all answers are correct
+     */
+    function checkAnswers(answers) {
+      let allCorrect = true;
+      answers.forEach((item, index) => {
+        const input = document
+          .getElementById(`input-${index}`)
+          .value.toUpperCase();
+        if (item.correct) {
+          document.getElementById(`word-${index}`).classList.add('used');
+        } else {
+          allCorrect = false;
+        }
+      });
+      return allCorrect;
+    }
+
+    /**
+     * Reset the quiz
+     */
+    function resetQuiz() {
+      shuffledWords = shuffleWords(WORDS, STATS, 10);
+      renderWordBank();
+      renderDefinitions();
+      checkBtn.disabled = true;
+      // grab first input element
+      document.querySelector('.definition input').focus();
+    }
+
+    function initialize() {
+      updateStatistics(WORDS, [], STATS);
+      resetQuiz();
+    }
+
+    function check() {
+      const answers = getAnswers();
+      updateStatistics(WORDS, answers, STATS);
+      if (checkAnswers(answers)) {
+        alert('All answers are correct!');
+        shuffledWords.forEach((item) => COUNTER.add(item.pair.word));
+        quizCounter.textContent = `${COUNTER.size}/${WORDS.length}`;
+        resetQuiz();
+      } else {
+        alert('Some answers are incorrect. Try again!');
+      }
+    }
+    document.getElementById('check-btn').addEventListener('click', check);
+
+    function generateNewList() {
+      const answers = getAnswers();
+      if (!checkAnswers(answers)) {
+        if (
+          !confirm(
+            'You have not answered all questions correctly.\n\nAre you sure you want to shuffle the quiz?',
+          )
+        ) {
+          return;
+        }
+      }
+      resetQuiz();
+    }
+    document
+      .getElementById('shuffle-btn')
+      .addEventListener('click', generateNewList);
+
+    initialize(WORDS);
+  </script>
+</body>
 </html>
