@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/colorthief@2.4.0/dist/color-thief.min.js"></script>
+
+</head>
+
+<body>
+  <div id="won">
+    <h1 style="font-size: 7em; color: white">YOU WON!</h1>
+    <img src="./img/toad.gif" style="max-height: 90%; max-width: 50%" />
+    <br />
+    <button id="start-over">Start Over</button>
+  </div>
+  <div id="app">
+    <div id="settings">
+      <label>
+        # of Words to Repeat:
+        <input id="numWords" value="0" type="number" min="0" max="20" /><br />
+      </label>
+      <label>
+        Difficulty Level:
+        <input id="difficultyLevelInput" value="0" type="number" min="0" max="5" /><br />
+      </label>
+      <label>
+        Talkative (sentences, jokes):
+        <input id="talkativeInput" type="checkbox" /><br />
+      </label>
+      <label>
+        Background Color:
+        <input id="bgColor" type="color" />
+      </label>
+      <hr />
+      <button id="start-over-link">Start Over</a>
+    </div>
+    <!-- Add your site or application content here -->
+    <div id="main">
+      <button id="speakButton">Repeat</button>
+      <div id="letters"></div>
+      <form id="form" spellcheck="false">
+        <input spellcheck="false" type="text" id="input" autocomplete="off" />
+        <button type="submit">Check</button>
+      </form>
+      <img id="photo" src="" />
+      <button style="display: none" id="nextWord">Next Word</button>
+    </div>
+    <div id="progress">
+      <img src="./img/princess-paused.png" id="sprite" />
+      <img src="./img/tower.png" id="toad" />
+    </div>
+    <div id="start">Click to Start</div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

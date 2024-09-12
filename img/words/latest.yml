@@ -1,8 +1,0 @@
-version: 2.7.0-beta
-files:
-  - url: Ganache-2.7.0-beta-win-x64-setup.exe
-    sha512: 1Feny6c55O92UOPQK3qaQ8RcxMLeGprO/QWsrXmK2gX7F2IILiFDuwEQlO/Wo0V7tabX4D5PhpUyz9yUw4mcxA==
-    size: 313722544
-path: Ganache-2.7.0-beta-win-x64-setup.exe
-sha512: 1Feny6c55O92UOPQK3qaQ8RcxMLeGprO/QWsrXmK2gX7F2IILiFDuwEQlO/Wo0V7tabX4D5PhpUyz9yUw4mcxA==
-releaseDate: '2023-02-07T23:03:04.410Z'
