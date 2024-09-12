@@ -45,7 +45,7 @@
         text-align: center;
       }
       .word-bank li {
-        list-style: none;
+        list-style: upper-alpha;
         padding: 5px 0;
         cursor: pointer;
       }
@@ -520,7 +520,7 @@
         wordListDiv.innerHTML = '';
         shuffledWords.forEach((item, index) => {
           const li = document.createElement('li');
-          li.textContent = `${String.fromCharCode(65 + index)}. ${
+          li.textContent = `${
             item.pair.word
           }`;
           li.id = `word-${index}`;
